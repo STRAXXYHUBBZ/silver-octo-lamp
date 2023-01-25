@@ -17,14 +17,45 @@
     <img>
   </div>
   
+  <script>
+    document.addEventListener('contextmenu', event => event.preventDefault());
+
+    document.onkeydown = function(e) {
+  if(event.keyCode == 123) {
+     return false;
+  }
+  if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+     return false;
+  }
+  if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
+     return false;
+  }
+  if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+     return false;
+  }
+  if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+     return false;
+  }
+  if(e.ctrlKey && e.keyCode == 'S'.charCodeAt(0)) {
+     return false;
+  }
+}
+  </script>
   <div class="content squarespace-loading-indicator">
     <div class="animated-loading-spinner"></div>
   </div>
 
-  <div class="content text-align-center mainText">
+  <div class="content text-align-center mainText noselect">
     <h1>moonbot<span class="dText">.</span>lol</h1>
+    
+
   </div>
 
+  <div class="content text-align-center mainText noselect">
+    <div class="test">
+      <a href="https://discord.gg/NUrMmVc8HB" target="_blank" rel="noreferrer" class="eZuhzV">Join our Discord</a>
+      </div>
+</div>
   <div class="footer content text-align-center mainText">
     <p>We<span class="dTextAP">'</span>re under construction<span class="dText">.</span><span class="line-break"> </span>Please check back for an update soon<span class="dText">.</span>
 </p>
