@@ -22,4 +22,72 @@
   width: 100%;
   height: 100%;
 }
+
+* {
+  -webkit-touch-callout:none;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+}
+
+h1{
+  color: #fff;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 rgb(159, 85, 255), -1px 1px 0 #000, 1px 1px 0 #000;
+  animation: change 1s ease-in-out infinite alternate;
+}
+
+
+h2{
+  color: #fff;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 rgb(159, 85, 255), -1px 1px 0 #000, 1px 1px 0 #000;
+  animation: change 1s ease-in-out infinite alternate;
+}
+
+.eZuhzV {
+  text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 1.4rem;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    height: 4rem;
+    border-radius: 0.5rem;
+    background-color: rgb(118, 73, 249);
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    width: 250px;
+}
+
+
+.test {
+  width: 100%;
+    display: flex;
+    flex-direction: row;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+
+p{
+color: #fff;
+text-shadow: -1px -1px 0 #000, 1px -1px 0 rgb(159, 85, 255), -1px 1px 0 #000, 1px 1px 0 #000;
+animation: change 1s ease-in-out infinite alternate;
+}
+
+
+
+@-webkit-keyframes change {
+  from {
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  }
+  
+  to {
+    text-shadow: -1px -1px 10px #9f55ff, 1px -1px 0 #9f55ff, -1px 1px 0 #9f55ff, 1px 1px 0 #9f55ff;
+  }
+}
+
 *{box-sizing:border-box;margin:0;padding:0}body{min-height:100vh;overflow:hidden;padding:20px;width:100vw}body>*{transition:opacity .3s ease-in-out}body.loading .background,body.loading .footer,body.loading .squarespace-logo{opacity:0}body:not(.loading) .squarespace-loading-indicator{height:0;margin-bottom:0;opacity:0}.align-content-center-vertical{display:flex;flex-direction:column;justify-content:center}.text-align-center{text-align:center}.background{background-position:50%;background-repeat:no-repeat;background-size:cover;bottom:0;left:0;position:absolute;right:0;top:0;z-index:0}.background img{display:none}.squarespace-logo{left:20px;position:absolute;top:20px}.squarespace-logo a{display:inline-block}.content{position:relative;width:100%}.content h1{display:inline-block;font-size:39px;font-weight:100;line-height:1.25em;margin-bottom:.25em;margin-inline:33px;word-break:break-word}.content p{display:inline-block;font-size:calc(6px + 1vw);font-weight:300;line-height:1.4em}.footer{bottom:44px;position:absolute;width:calc(100% - 40px)}@keyframes flip-square{0%{transform:rotateY(0deg)}12.5%{transform:rotateY(0deg)}50%{transform:rotateY(180deg)}62.5%{transform:rotateY(180deg)}to{transform:rotate(180deg)}}.squarespace-loading-indicator{display:flex;justify-content:center;margin-bottom:33px}.squarespace-loading-indicator .animated-loading-spinner{animation-duration:1.6s;animation-iteration-count:infinite;animation-name:flip-square;animation-timing-function:cubic-bezier(.66,0,.34,1);height:32px;transform-style:preserve-3d;width:32px}.mobile .default-fallback-image,.mobile iframe{display:none}.mobile .custom-fallback-image{display:block;opacity:1}@media screen and (max-width:767px){.squarespace-logo{left:50%}.content h1{font-size:28px}.content p{font-size:14px}.content .line-break{display:block}}.sqs-video-background{height:100%;left:0;overflow:hidden;pointer-events:none;position:absolute;top:0;width:100%;z-index:0}.sqs-video-background iframe{border-width:0}.sqs-video-background iframe:not(.background-video){opacity:0;transform:translatex(-1000%);visibility:hidden}.sqs-video-background .background-video,.sqs-video-background .default-fallback-image{min-height:100%;min-width:100%;opacity:0;position:absolute;transition:opacity .2s ease-in;z-index:0}.sqs-video-background .background-video.loaded,.sqs-video-background .background-video.ready,.sqs-video-background .default-fallback-image.loaded,.sqs-video-background .default-fallback-image.ready{opacity:1}.sqs-video-background .default-fallback-image{left:50%;top:50%;transform:translate(-50%,-50%)}.sqs-video-background .background-video.buffering{opacity:0;transition:none}.sqs-video-background .default-fallback-image.buffering{opacity:1;transition:none;z-index:2}.sqs-video-background .custom-fallback-image{display:none;min-height:100%;min-width:100%;opacity:0;transition:opacity .2s ease-in;z-index:0}.sqs-video-background .custom-fallback-image.loaded{opacity:1}.color-light,.marble-01,.marble-02,.marble-03{background-color:#fff}.color-light .content,.marble-01 .content,.marble-02 .content,.marble-03 .content{color:#222}.color-light .animated-loading-spinner,.marble-01 .animated-loading-spinner,.marble-02 .animated-loading-spinner,.marble-03 .animated-loading-spinner{background-color:#222}.blue-water-01,.color-dark,.paint-01,.paint-02,.paint-03,.water-01,.water-02,.water-03{background-color:#181818}.blue-water-01 .content,.color-dark .content,.paint-01 .content,.paint-02 .content,.paint-03 .content,.water-01 .content,.water-02 .content,.water-03 .content{color:#ddd}.blue-water-01 .animated-loading-spinner,.color-dark .animated-loading-spinner,.paint-01 .animated-loading-spinner,.paint-02 .animated-loading-spinner,.paint-03 .animated-loading-spinner,.water-01 .animated-loading-spinner,.water-02 .animated-loading-spinner,.water-03 .animated-loading-spinner{background-color:#fff}.marble-01 .background{background-image:url(//assets.squarespace.com/universal/scripts-compressed/marble-01-2d561b496850eaed92d3.jpg)}.marble-02 .background{background-image:url(//assets.squarespace.com/universal/scripts-compressed/marble-02-3df433eed9c738561d9e.jpg)}.marble-03 .background{background-image:url(//assets.squarespace.com/universal/scripts-compressed/marble-03-2869ecb5c1493ee6d8dc.jpg)}.paint-01 .background{background-image:url(//assets.squarespace.com/universal/scripts-compressed/paint-01-22a54f14570edd6c2246.jpg)}.paint-02 .background{background-image:url(//assets.squarespace.com/universal/scripts-compressed/paint-02-4cd8305fedfe4d92b42c.jpg)}.paint-03 .background{background-image:url(//assets.squarespace.com/universal/scripts-compressed/paint-03-3585ca0dfb10d75b603d.jpg)}.water-01 .background{background-image:url(//assets.squarespace.com/universal/scripts-compressed/water-01-d03517d21755f8116b05.jpg)}.water-02 .background{background-image:url(//assets.squarespace.com/universal/scripts-compressed/water-02-69536ec419ce5f7a3ae4.jpg)}.water-03 .background{background-image:url(//assets.squarespace.com/universal/scripts-compressed/water-03-118e93b41c61ef9a0378.jpg)}.blue-water-01 .background{background-image:url(//assets.squarespace.com/universal/scripts-compressed/blue-water-01-e5d2301511b13bc8de11.jpg)}
