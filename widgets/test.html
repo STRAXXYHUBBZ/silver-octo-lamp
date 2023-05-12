@@ -4,6 +4,13 @@
     position: relative;
   }
   .container {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,6 +19,13 @@
   }
   
   select {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
     padding: 10px;
     font-size: 16px;
     border: none;
@@ -23,16 +37,37 @@
   }
 
   select option {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
     color: black;
     border-radius: 5px;
     background-color: #cc29ec80;
     
   }
   select option:checked {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
   background-color: #991578d3;
   color: white;
 }
 select option:hover {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
   background-color: #ffc;
   color: red;
 }
@@ -41,7 +76,13 @@ select option:hover {
   
   button {
     box-shadow: 0 3px 4px #aa13c9;
-
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
     background: #bf34db;
     color:  #fff;
     border: none;
@@ -56,6 +97,24 @@ select option:hover {
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
 </head>
 
+<body oncontextmenu="return false;">
+  <script>document.onkeydown = (e) => {
+    if (e.key == 123) {
+        e.preventDefault();
+    }
+    if (e.ctrlKey && e.shiftKey && e.key == 'I') {
+        e.preventDefault();
+    }
+    if (e.ctrlKey && e.shiftKey && e.key == 'C') {
+        e.preventDefault();
+    }
+    if (e.ctrlKey && e.shiftKey && e.key == 'J') {
+        e.preventDefault();
+    }
+    if (e.ctrlKey && e.key == 'U') {
+        e.preventDefault();
+    }
+  };</script>
 
 
 <body>  
@@ -82,7 +141,7 @@ select option:hover {
   </div>
   <br>
   <br>
-  <button type="button" onclick="getText()">Copy Link</button>
+  <button type="button" id="copy-button" onclick="getText()">Copy Link</button>
 
 </div></body>
 
@@ -93,50 +152,64 @@ select option:hover {
    function updateValue() {
         value = document.getElementById("dropdown").value;
    }
-function getText() {
-    var intpu = document.getElementById("intpu");
-    var text = intpu.value;
-    const request = new XMLHttpRequest();
-    const url = "https://kick.com/api/v1/channels/" + intpu.value;
-
-    request.open("GET", url);
-
-    request.onload = function() {
-      if (request.status === 200) {
-        const response = JSON.parse(request.responseText);
-        if (response.hasOwnProperty("chatroom")) {
-         console.log(response.chatroom.id);
-         var value;
-         value = document.getElementById("dropdown").value;
-
-         var widgetURL = "https://moonbot.lol/widgets/tts?id=" + response.chatroom.id +"&voice="+value;
-         window.open(widgetURL, "_blank");
-       }
-      }else if (request.status === 404) {
-        var errorElement = document.getElementById("errorEle");
-errorElement.style.display = "block";
-errorElement.setAttribute('data-aos', 'fade-right');
-AOS.init();
-
-setTimeout(function() {
-  errorElement.style.opacity = "0";
-  errorElement.style.transform = "translate(100%, 50%)";
-  errorElement.style.transition = "opacity 0.5s ease-in-out, transform 1s ease-in-out";
-  setTimeout(function() {
-    errorElement.style.display = "none";
-  }, 1000); // wait for the transition to complete before hiding the element
-}, 3000); // wait for 3 seconds before starting the flush out process
-
-      
+   function copyToClipboard(text) {
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(text).then(function() {
+      console.log('Text copied to clipboard');
+    }, function() {
+      console.error('Could not copy text to clipboard');
+    });
   } else {
-    console.log("Error: " + request.status);
+    console.error('Clipboard API not supported');
   }
-    };
+}
 
+function getText() {
+  var intpu = document.getElementById("intpu");
+  var text = intpu.value;
+  const request = new XMLHttpRequest();
+  const url = "https://kick.com/api/v1/channels/" + intpu.value;
 
-request.send();
-  }
-  
+  request.open("GET", url);
+
+  request.onload = function() {
+    if (request.status === 200) {
+      const response = JSON.parse(request.responseText);
+      if (response.hasOwnProperty("chatroom")) {
+        console.log(response.chatroom.id);
+        var value;
+        value = document.getElementById("dropdown").value;
+        var widgetURL = "https://moonbot.lol/widgets/tts?id=" + response.chatroom.id + "&voice=" + value;
+
+        window.open(widgetURL, "_blank");
+
+        var copyButton = document.getElementById("copy-button");
+        copyButton.addEventListener("click", function() {
+          copyToClipboard(widgetURL);
+        });
+      }
+    } else if (request.status === 404) {
+      var errorElement = document.getElementById("errorEle");
+      errorElement.style.display = "block";
+      errorElement.setAttribute('data-aos', 'fade-right');
+      AOS.init();
+
+      setTimeout(function() {
+        errorElement.style.opacity = "0";
+        errorElement.style.transform = "translate(100%, 50%)";
+        errorElement.style.transition = "opacity 0.5s ease-in-out, transform 1s ease-in-out";
+        setTimeout(function() {
+          errorElement.style.display = "none";
+        }, 1000); // wait for the transition to complete before hiding the element
+      }, 3000); // wait for 3 seconds before starting the flush out process
+    } else {
+      console.log("Error: " + request.status);
+    }
+  };
+
+  request.send();
+}
+
 
 </script>
     <script>
