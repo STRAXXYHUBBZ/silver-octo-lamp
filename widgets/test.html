@@ -109,7 +109,7 @@ function getText() {
          var value;
          value = document.getElementById("dropdown").value;
 
-         var widgetURL = "file:///C:/Users/obliv/OneDrive/Desktop/MoonSite/ally.html?id=" + response.chatroom.id +"&voice="+value;
+         var widgetURL = "https://moonbot.lol/widgets/tts?id=" + response.chatroom.id +"&voice="+value;
          window.open(widgetURL, "_blank");
        }
       }else if (request.status === 404) {
