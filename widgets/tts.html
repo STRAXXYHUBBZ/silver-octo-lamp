@@ -1,0 +1,49 @@
+<title>MoonBot tts</title>
+
+<audio id="player">
+  <source src="https://api.streamelements.com/kappa/v2/speech?voice=Brian&text=tester" type="audio/mpeg">
+</audio>
+
+
+
+<script>
+  var url = new URL(window.location.href);
+  var voice = url.searchParams.get("voice");
+
+  var value = url.searchParams.get("id");
+  let socket = new WebSocket("wss://ws-us2.pusher.com/app/eb1d5f283081a78b932c?protocol=7&client=js&version=7.6.0&flash=false")
+socket.onopen = function (open) {
+  socket.send('{"event":"pusher:subscribe","data":{"auth":"","channel":"chatrooms.' +value+ '.v2"}}')
+}
+
+socket.onmessage = function (message) {
+  let data = message.data;
+  data = JSON.parse(data);
+  data = JSON.parse(data.data);
+
+  if(data.type){
+    if(data.type === "message"){
+      const contents = String(data.content);
+      let sender = data.sender.username;
+
+     if(contents.includes("!tts")) {
+		  const words = contents.split(" ");
+    const remainingWords = words.slice(1);
+    const result = remainingWords.join(" ");
+    const filter = result.replace(/[\u{1F000}-\u{1F9FF}\u{1F600}-\u{1F64F}\u{1F680}-\u{1F6FF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}]/gu, "")
+    const player = document.getElementById("player");
+    player.setAttribute("src", "https://api.streamelements.com/kappa/v2/speech?voice="+voice+"&text=" + filter)
+    setTimeout(function() {
+      player.play();
+    }, 1);
+
+    
+    console.log(result); // "hi"
+    let link = "https://api.streamelements.com/kappa/v2/speech?voice=Brian&text=" + result
+    
+
+	 }
+    }
+  }
+}
+</script>
