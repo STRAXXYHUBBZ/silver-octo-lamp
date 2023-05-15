@@ -1,0 +1,150 @@
+<title>MoonBot chatbox</title>
+<style>
+  .emote {
+    height: 25px;
+    margin-top: 5px;
+  }
+</style>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<script>
+  let socket = new WebSocket("wss://ws-us2.pusher.com/app/eb1d5f283081a78b932c?protocol=7&client=js&version=7.6.0&flash=false")
+socket.onopen = function (open) {
+  socket.send('{"event":"pusher:subscribe","data":{"auth":"","channel":"chatrooms.875258.v2"}}')
+}
+let cloneCounter = 0;
+socket.onmessage = function (message) {
+  if (cloneCounter >= 24) {
+    const oldestBox = document.getElementById("chatmsg-" + (cloneCounter - 23));
+    container.removeChild(oldestBox);
+  }
+  let data = message.data;
+  data = JSON.parse(data);
+  data = JSON.parse(data.data);
+
+
+
+  if (data.type && data.type === "message") {
+    const contents = String(data.content);
+    const sender = data.sender.username;
+    const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+    const identity = data.sender.identity;
+
+
+
+
+    let isBroadcaster = false;
+    identity.badges.forEach((badge) => {
+      if (badge.type === "broadcaster" && badge.text === "Broadcaster") {
+        isBroadcaster = true;
+      }
+    });
+
+
+    let isVerified = false;
+    identity.badges.forEach((badge) => {
+      if (badge.type === "verified" && badge.text === "Verified channel") {
+        isVerified = true;
+      }
+    });
+    let isOG = false;
+    identity.badges.forEach((badge) => {
+      if (badge.type === "og" && badge.text === "OG") {
+        isOG = true;
+      }
+    });
+    let isVIP = false;
+    identity.badges.forEach((badge) => {
+      if (badge.type === "vip" && badge.text === "VIP") {
+        isVIP = true;
+      }
+    });
+
+    let isGifter = false;
+    identity.badges.forEach((badge) => {
+      if (badge.type === "sub_gifter" && badge.text === "Sub Gifter") {
+        isGifter = true;
+      }
+    });
+
+
+      const container = document.getElementById("container");
+      const originalElement = document.getElementById("chatmessage");
+      const clonedElement = originalElement.cloneNode(true);
+      cloneCounter++;
+      clonedElement.id = "chatmsg-" + cloneCounter;
+      console.log(cloneCounter);
+      container.insertBefore(clonedElement, originalElement);
+      const box = document.getElementById("chatmessage");
+
+
+
+      let containsEmote = false;
+
+      var regex = /\[emote:(\w+):(\w+)\]/g;
+	  	var matches = contents.match(regex);
+
+		// Loop through each match and replace it with the corresponding image link
+		if (matches) {
+			for (var i = 0; i < matches.length; i++) {
+				var match = matches[i];
+				var id = match.match(/\[emote:(\w+):(\w+)\]/)[1];
+				var name = match.match(/\[emote:(\w+):(\w+)\]/)[2];
+				var imgLink = "https://files.kick.com/emotes/" + id + "/fullsize";
+				contentsEmote = contents.replace(match, "<img src='" + imgLink + "' alt='" + name + "' class='emote'/>");
+        containsEmote = true;
+			}
+		}
+    let defaultHTML = "<span style='color: #" + randomColor + ";'>" + sender + "</span>: " + contents + "</div> ";
+
+    if(containsEmote){
+      defaultHTML = "<span style='color: #" + randomColor + ";'>" + sender + "</span>: " + contentsEmote + "</div> ";
+     
+
+    }
+    // let defaultHTML = "<span style='color: #" + randomColor + ";'>" + sender + "</span>: " + contents + "</div> ";
+
+
+
+
+      if(isBroadcaster){
+        defaultHTML = "<div data-aos='fade-right'><img src='./chatAssets/broadcaster.png' style='height: 19px; padding-right: 7px;'>" + defaultHTML;
+      }
+      if(isVerified){
+        defaultHTML = "<div data-aos='fade-right'><img src='./chatAssets/verified.png' style='height: 19px; padding-right: 7px;'>" + defaultHTML;
+      }
+      if(isOG){
+        defaultHTML = "<div data-aos='fade-right'><img src='./chatAssets/OG.png' style='height: 19px; padding-right: 7px;'>" + defaultHTML;
+      }
+      if(isVIP){
+        defaultHTML = "<div data-aos='fade-right' data-aos-duration='1500'><img src='./chatAssets/VIP.png' style='height: 19px; padding-right: 7px;'>" + defaultHTML;
+      }
+
+      if(isGifter){
+        defaultHTML = "<div data-aos='fade-right' data-aos-duration='1500'><img src='./chatAssets/gifter.png' style='height: 19px; padding-right: 7px;'>" + defaultHTML;
+      }
+     
+      box.innerHTML = defaultHTML;
+  }
+}
+
+
+
+</script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+<body style="background-color: #000;"></body>
+
+<script>AOS.init();</script>
+
+<div id="container" >
+    <div id="chatmessage" style="margin:5px;background-color: transparent; border-radius: 4px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #ffffff; font-weight: 500; font-size: 25px;">
+    
+    </div>
+</div>
+
+  

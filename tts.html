@@ -1,4 +1,11 @@
 <style>
+
+#particles-js {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  z-index: -1;
+}
 		.checkbox {
 			display: inline-block;
 			position: relative;
@@ -57,13 +64,15 @@
 		}
 
 
-
+   
 
   body{
+    overflow: hidden;
     background: url("./widgets/img/hero-bg.png");
     position: relative;
   }
   .container {
+    z-index: 2;
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
      -khtml-user-select: none; /* Konqueror HTML */
@@ -100,6 +109,7 @@
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-shadow: 1px 1px #aa13c9; color: white; text-align: center; font-weight: 400;font-size: 16px;
 
   }
+
 
   select option {
     -webkit-touch-callout: none; /* iOS Safari */
@@ -154,6 +164,7 @@ optgroup {
             user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */
     background: #bf34db;
+    z-index: 2;
     color:  #fff;
     border: none;
     border-radius: 5px;
@@ -176,6 +187,8 @@ optgroup {
 
 
 <body>  
+  <div id="particles-js"></div>
+
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
   <div class="container">
@@ -308,5 +321,19 @@ function _0x3565(_0x5eecf3,_0x52eab5){var _0x5538d7=_0x5538();return _0x3565=fun
 
 
 
+
+
+
+<script src="particles.js"></script>
+<script src="app.js"></script>
+
+
+
+<!-- <div id="particles-js"> </div> -->
+
+
+<script src="particles.js"></script>
+<script src="app.js"></script>
+<script src="custom.js  "></script>
 
 
