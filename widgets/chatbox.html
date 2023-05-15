@@ -4,6 +4,10 @@
     height: 25px;
     margin-top: 5px;
   }
+
+  .badges {
+    height: 19px; padding-right: 7px;
+  }
 </style>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -12,7 +16,7 @@
 <script>
   let socket = new WebSocket("wss://ws-us2.pusher.com/app/eb1d5f283081a78b932c?protocol=7&client=js&version=7.6.0&flash=false")
 socket.onopen = function (open) {
-  socket.send('{"event":"pusher:subscribe","data":{"auth":"","channel":"chatrooms.875258.v2"}}')
+  socket.send('{"event":"pusher:subscribe","data":{"auth":"","channel":"chatrooms.196616.v2"}}')
 }
 let cloneCounter = 0;
 socket.onmessage = function (message) {
@@ -70,6 +74,20 @@ socket.onmessage = function (message) {
     });
 
 
+    let isSUB = false;
+    identity.badges.forEach((badge) => {
+      if (badge.type === "subscriber" && badge.text === "Subscriber") {
+        isSUB = true;
+      }
+    });
+
+
+    let isModerator = false;
+    identity.badges.forEach((badge) => {
+      if (badge.type === "moderator" && badge.text === "Moderator") {
+        isModerator = true;
+      }
+    });
       const container = document.getElementById("container");
       const originalElement = document.getElementById("chatmessage");
       const clonedElement = originalElement.cloneNode(true);
@@ -110,22 +128,30 @@ socket.onmessage = function (message) {
 
 
       if(isBroadcaster){
-        defaultHTML = "<div data-aos='fade-right'><img src='./chatAssets/broadcaster.png' style='height: 19px; padding-right: 7px;'>" + defaultHTML;
+        defaultHTML = "<div data-aos='fade-right'><img src='https://moonbot.lol/widgets/chatAssets/broadcaster.png' class='badges'>" + defaultHTML;
       }
       if(isVerified){
-        defaultHTML = "<div data-aos='fade-right'><img src='./chatAssets/verified.png' style='height: 19px; padding-right: 7px;'>" + defaultHTML;
+        defaultHTML = "<div data-aos='fade-right'><img src='https://moonbot.lol/widgets/chatAssets/verified.png' class='badges'>" + defaultHTML;
       }
       if(isOG){
-        defaultHTML = "<div data-aos='fade-right'><img src='./chatAssets/OG.png' style='height: 19px; padding-right: 7px;'>" + defaultHTML;
+        defaultHTML = "<div data-aos='fade-right'><img src='https://moonbot.lol/widgets/chatAssets/OG.png' class='badges'>" + defaultHTML;
       }
       if(isVIP){
-        defaultHTML = "<div data-aos='fade-right' data-aos-duration='1500'><img src='./chatAssets/VIP.png' style='height: 19px; padding-right: 7px;'>" + defaultHTML;
+        defaultHTML = "<div data-aos='fade-right' data-aos-duration='1500'><img src='https://moonbot.lol/widgets/chatAssets/VIP.png' class='badges'" + defaultHTML;
       }
 
       if(isGifter){
-        defaultHTML = "<div data-aos='fade-right' data-aos-duration='1500'><img src='./chatAssets/gifter.png' style='height: 19px; padding-right: 7px;'>" + defaultHTML;
+        defaultHTML = "<div data-aos='fade-right' data-aos-duration='1500'><img src='https://moonbot.lol/widgets/chatAssets/gifter.png' class='badges'>" + defaultHTML;
       }
-     
+      if(isBroadcaster){
+        defaultHTML = "<div data-aos='fade-right'><img src='https://moonbot.lol/widgets/chatAssets/broadcaster.png' class='badges'>" + defaultHTML;
+      }
+      if(isModerator){
+        defaultHTML = "<div data-aos='fade-right'><img src='https://moonbot.lol/widgets/chatAssets/moderator.png' class='badges'>" + defaultHTML;
+      }
+      if(isSUB){
+        defaultHTML = "<div data-aos='fade-right'><img src='https://moonbot.lol/widgets/chatAssets/moderator.png' class='badges'>" + defaultHTML;
+      }
       box.innerHTML = defaultHTML;
   }
 }
@@ -137,7 +163,7 @@ socket.onmessage = function (message) {
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 
-<body style="background-color: #000;"></body>
+<body style="background-color: #000; overflow: hidden;"></body>
 
 <script>AOS.init();</script>
 
