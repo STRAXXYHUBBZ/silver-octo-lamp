@@ -1,0 +1,1381 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040)https://rumble.com/search/all?q=obliviox -->
+<html lang="en"><head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Search results for: obliviox</title><link rel="canonical" href="https://rumble.com/search/videos?q=obliviox"><style>html{
+	background: #f3f5f8;
+	color:#061726;
+	font: normal 14px/1.5 system-ui, sans-serif;
+	-webkit-text-size-adjust: 100%;
+}
+body, a, button, input, textarea, select, option, h1, h2, h3, address, ul, ol { margin: 0; padding: 0; color: inherit; font-family: inherit; font-weight: inherit; font-size: inherit; text-decoration: inherit; font-style: inherit; line-height: inherit; }
+button, [type=button], [type=submit] { -webkit-appearance: button; cursor: pointer; background-color: transparent; border-style: none; }
+ul, ol { list-style: none; }
+label { cursor: pointer; }
+a:hover{ text-decoration: underline; }
+button{
+	white-space:nowrap;
+}
+.h1 {
+	font-size:2rem;
+	line-height: 1.3;
+	margin:1rem 0;
+	font-weight: 700;
+ 	word-wrap: break-word;
+	overflow-wrap: break-word;
+}
+small {
+	font-size: 0.9rem;
+	color: #495A6A;
+}
+.themable-locals-icon {
+	color: #421c52;
+}
+
+.flex {
+	display: flex;
+}
+
+.clear{
+	clear:both;
+}
+.round-button{
+	display: inline-flex;
+	padding: 0.5rem 0.7rem;
+	border-radius: 10rem;
+	font-weight: 600;
+	margin-left: 0.35rem;
+	margin-right: 0.35rem;
+	font-size: 1rem;
+	opacity: 1;
+	align-items: center;
+}
+.media-subscribe{
+	border: 1px solid #85C742;
+}
+.round-button:hover{
+	text-decoration:none;
+	opacity:0.85;
+}
+.round-button:disabled,
+.round-button:disabled:hover {
+	background: #999;
+	cursor: default;
+}
+.bg-green{
+	background: #85c742;
+	color:inherit;
+}
+.bg-green:hover,
+.bg-green:focus-visible {
+	background: #77b23b;
+	opacity: 1;
+}
+.bg-blue{
+	background: #37c;
+	color:#fff;
+}
+.bg-blue:hover,
+.bg-blue:focus-visible {
+	background: #2a62a7;
+	opacity: 1;
+}
+.bg-red{
+	background:#b70000;
+	color:#fff;
+}
+.bg-grey{
+	background:#999;
+	color:#fff;
+}
+.bg-white{
+	background:#fff;
+	color:#000;
+}
+.bg-purple {
+	background: #6E5CE0;
+	color: #fff;
+}
+.bg-purple:hover,
+.bg-purple:focus-visible {
+	background: #6E5CE0;
+	color: #fff;
+	opacity: 0.85;
+}
+.bg-purple[disabled],
+.bg-purple[disabled]:hover {
+	background: #6E5CE0;
+	opacity: 0.5;
+	color: #fff;
+}
+.ringed-button {
+	box-shadow: inset 0 0 0 2px #85c742;
+    background-color: transparent;
+    color: #0d2437;
+}
+.transparent-button {
+    background-color: transparent;
+    color: #0d2437;
+}
+.ringed-button:hover,
+.ringed-button:focus-visible,
+.transparent-button:hover,
+.transparent-button:focus-visible {
+	background: #f3f5f8;
+}
+.select-arrow-bg{
+	-moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+	background-image:  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 21'%3E%3Cpath d='M16.984 12.888L4.682 1.022.984 4.589l16 15.433 16-15.433-3.698-3.567z' /%3E%3C/svg%3E");
+	background-repeat: no-repeat;
+	background-position:  92% center;
+	background-size: 8px;
+}
+
+/* layout columns */
+.thirds{
+	margin-left:-1rem;
+	margin-right:-1rem;
+}
+.two-thirds, .one-thirds{
+	width:100%;
+	box-sizing:border-box;
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+.video-processing-error {
+	background: #900;
+	color: white;
+	padding: 0.75rem 1rem;
+}
+
+/* Alerts (.lrt) */
+.lrt-container {
+	position: fixed;
+	top: 16px;
+	left: 0;
+	right: 0;
+	z-index: 3000;
+
+	max-height: 0;
+	overflow: visible;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+}
+.lrt {
+	box-sizing: border-box;
+	min-width: 5em;
+	max-width: 80vw;
+	border: 1px solid currentColor;
+	box-shadow:0 5px 15px 0 rgba(0,0,0,0.4);
+	border-radius: 0.4em;
+	transition: opacity 500ms ease-in; /* maintain the same value for JS FADE_OUT_MS */
+
+	display: flex;
+	align-items: stretch;
+
+	cursor: pointer;
+}
+.lrt--fade-out {
+	opacity: 0;
+}
+.lrt--success {
+	border-color: #4c8800;
+	background: #85c742;
+	color: #284700;
+}
+.lrt--warning {
+	border-color: #ee6;
+	background: #F2F2CC;
+	color: #a60;
+}
+.lrt--error {
+	border-color: #c00;
+	background: #900;
+	color: #fff;
+}
+
+.lrt__content {
+	padding: 0.6em 0.6em 0.6em 1em;
+}
+.lrt__content :any-link {
+	text-decoration: underline;
+}
+
+.lrt__count-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.lrt__count-number {
+    display: inline-block;
+    border: 1px solid currentColor;
+    padding: 0.1em 0.6em;
+    border-radius: calc(1px + 0.7em);
+    font-size: 0.8rem;
+    font-weight: 600;
+    opacity: 0.75;
+}
+
+.lrt__close {
+	padding: 0.6em 1em 0.6em 0.6em;
+	opacity: 0.75;
+}
+.lrt:hover > .lrt__close {
+	opacity: 1;
+}main{
+	padding:2rem 0;
+}
+.constrained{
+	box-sizing: border-box;
+	width: 100%;
+	max-width: 1700px;
+	margin: 0 auto;
+	padding-left: 1rem;
+	padding-right: 1rem;
+}#is-sidebar-open { display: none; }
+.video-listing-entry:not(:first-child) { margin: 24px 0; }.channel-item{
+	text-align:center;
+	font-size: 0.8rem;
+	font-weight:bold;
+	color: #495A6A;
+	position: relative;
+	background-color: white;
+	padding:2rem 1rem;
+	border-radius: 0.8rem;
+	height:100%;
+	width: 100%;
+	box-sizing: border-box;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.channel-item:hover{
+	background: #85C742;
+}
+.channel-item:hover .channel-item--following{
+	color: #3d6b00;
+}
+.channel-item--inner {
+	display:inline-block;
+}
+.channel-item--img{
+	width:75px;height:75px;
+	display:inline-block;
+}
+.channel-item--img .user-image{
+	width:100%;height:100%;
+}
+.channel-item--title{
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	font-size:1rem;
+	line-height:1.3rem;
+	font-weight:bold;
+	height:36px;
+	overflow: hidden;
+}
+.channel-item--name{
+	text-overflow: ellipsis;
+	overflow: hidden;
+	display: block;
+}
+.channel-item i.user-image--letter:after{
+	font-size:32px
+}
+.channel-item--subscribers{
+	margin-top:10px;
+	display:inline-block;
+}
+
+.channel-item--following {
+	color:#85C742;
+	text-decoration: none;
+	display:inline-block;
+}
+.channel-item--following::before{
+	color: #061726;
+	content: " • ";
+	display:inline-block;
+	padding: 0 5px;
+}
+
+.channel-item--by-verified {
+	width:16px;
+	height:16px;
+	margin-left:0.4rem;
+	padding-left:0.1rem;
+	float:right;
+	stroke: white;
+}.tuner-box { display: flex; flex-direction: column; /* flex to prevent unwanted margin collapse */; font-size: 1.1rem; background: white; border-radius: 0.8rem; padding: 1.4rem 1.4rem 0; }
+.tuner-box--section { margin-bottom: 1rem; }
+.tuner-box--section-header { color: #061726; font-weight: bold; }
+.tuner-box--ul { margin: 0.4rem 0 0.9999999999999999rem 0; }
+.tuner-box--ul > li:not(:first-child) { border-top: 1px solid #F3F5F8 }
+.tuner-box--li {}
+.tuner-box--link { display: block; color: #555; padding: 0.4rem 0; font-size:0.9rem }
+a.tuner-box--link:hover { text-decoration: none; color: #000; }
+.tuner-box--link--current { position:relative; color: #000 }
+.tuner-box--link--current > svg {max-width: 20px; max-height: 20px; stroke: #85C742; position: absolute; right:0; fill:none}.channel-listings  {
+	white-space: nowrap; overflow: hidden; height:200px; width:100%; position:relative; margin: 0 0 2rem;
+}
+.channel-listing-entry{
+	float:left;
+	width: 14.28%;
+	max-width:  250px;
+	height: 200px;
+	white-space: normal;
+	padding:0 1.5rem;
+	box-sizing: border-box;
+}
+#is-sidebar-open { display: none; }
+.channel-listing-more {float:right}
+.channel-listing-more > a.channel-item {background: #85C742; font-size: 1rem}
+.channel-listing-more {display:none}
+.channel-listing-more-7 {display:block}
+
+@media(max-width:1450px) {
+	.channel-listing-entry{width:16.66%}
+	.channel-listing-entry-6 {display:none}
+	.channel-listing-more-6 {display:block}
+}
+@media(max-width:1240px) {
+	.channel-listing-entry{width:20%}
+	.channel-listing-entry-5 {display:none}
+	.channel-listing-more-5 {display:block}
+}
+@media(max-width:1040px) {
+	.channel-listing-entry{width:25%}
+	.channel-listing-entry-4 {display:none}
+	.channel-listing-more-4 {display:block}
+}
+@media(max-width:800px) {
+	.channel-listing-entry{width:33.33%}
+	.channel-listing-entry-3 {display:none}
+	.channel-listing-more-3 {display:block}
+}
+@media(max-width:600px) {
+	.channel-listing-entry{width:50%}
+	.channel-listing-entry-2 {display:none}
+	.channel-listing-more-2 {display:block}
+}.header{
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	color:#ddd;
+	background:#fff;
+	height:4rem;
+	padding:0;
+	z-index:200;
+	box-shadow: 0 1px 0 #d6e0ea;
+}
+.header-div{
+	display:flex;
+	color:#fff;
+	height:100%;
+	align-items:center;
+	position:relative;
+	padding: 0 1rem;
+}
+.main-menu-toggle,
+.menu-toggle {
+	display: flex;
+	align-items: center;
+}
+.main-menu-close,
+.main-menu-open{
+	stroke:#061726;
+	stroke-width:2px;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+}
+.main-menu-close{
+	display:none;
+	stroke-width:3px
+}
+.pop-show>.main-menu-close{display:inline-block}
+.pop-show>.main-menu-open{display:none}
+.header-logo{
+	width:8rem;
+	margin-right: 0.2rem;
+	display: flex;
+	flex-shrink:0;
+	align-items: center;
+}
+.header-logo img {
+	width: 100%;
+	height: auto;
+}
+.header-upload{
+	box-sizing: border-box;
+	border-radius:10rem;
+	padding: 0 0.35rem;
+	height:2.6rem;
+	width:2.6rem;
+	margin:0 1rem 0 0.5rem;
+	display: flex;
+	align-items: center;
+}
+.header-upload svg {
+	fill: #85C742;
+	width: 100%;
+}
+.header-upload-menu {
+	display: none;
+	right: 0;
+}
+.header-upload-menu.pop-show {
+	display: block;
+}
+main {
+	display: block;
+	margin-top: 4rem;
+	overflow: hidden;
+}
+.u-deemphasized {
+    color: #495a6a;
+}
+
+#main-menu.main-menu-nav-collapsed {
+	box-shadow: none;
+}
+#main-menu.main-menu-nav-collapsed,
+.main-menu-nav-collapsed .main-menu-heading {
+	font-size: 10px;
+	text-align: center;
+}
+.main-menu-nav-collapsed .main-menu-item-label,
+.main-menu-item-label-collapsed {
+	display: none;
+}
+.main-menu-nav-collapsed .main-menu-item-label-collapsed {
+	display: block;
+}
+.main-menu-nav-collapsed .main-menu-item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.main-menu-nav-collapsed .main-menu-item {
+	padding: 8px 5px;
+}
+
+.main-menu-nav-collapsed .main-menu-heading {
+	padding: 1.5rem 5px 1rem;
+}
+
+.main-menu-nav-collapsed .main-menu-item-channel {
+	padding: 4px 5px;
+}
+.main-menu-nav-collapsed .main-menu-icon,
+.main-menu-nav-collapsed .user-image {
+	flex-shrink: 0;
+	width: 24px; height: 24px; font-size: 24px;
+	margin-right: 0;
+	margin-bottom: 0.5rem;
+}
+.main-menu-nav-collapsed .main-menu-icon {
+	stroke-width: 1.5px;
+}
+
+.main-menu-nav-collapsed .main-menu-item-channel .user-image {
+	flex-shrink: 0;
+	width: 30px; height: 30px; font-size: 30px;
+	margin: 0;
+}
+.header-user-actions {
+	display: flex;
+	align-items: center;
+}
+
+.header-user-actions button:last-child {
+	margin-right: 0;
+}.main-menu-toggle, .menu-toggle {
+	padding: 1rem;
+	margin-left: -1rem;
+}
+.header-search{
+	display:flex;
+	margin-left: auto;
+	align-items:center;
+	border-radius: 0.8rem;
+}
+.header-search-select, .header-search-field {
+	border:0;
+	height:100%;
+	background-color:transparent;
+	font-size:16px;
+	color:#061726;
+	outline-offset: 3px;
+}
+.header-search:focus-within {
+	box-shadow: 0 0 0 2px #0d2437;
+	border-color: transparent;
+}
+.header-search-field:focus-visible,
+.header-search-submit:focus-visible {
+	outline: none;
+}
+.header-search-select {
+    text-indent: 0.01px;
+	width: 7rem;
+	flex-shrink: 0;
+	padding: 0 1.5rem 0 1rem;
+	border:0;
+}
+.header-search-field{
+	-webkit-appearance: textfield;
+	width:100%;
+	padding:0 0.7rem;
+}
+.header-search-field::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+.header-search-field::placeholder{
+	color:#061726;
+}
+.header-search-submit{
+	height:2.5rem;
+	width:2.5rem;
+	padding:0.6rem;
+	flex-shrink:0;
+}
+.header-search-select,.header-search-field{display:none;}
+.header-search-select.pop-show,.header-search-field.pop-show{
+	display:block;
+}
+.header-search.pop-show{
+	position:absolute;
+	left: 4rem;
+	right: 1rem;
+	z-index:100;
+	background: white;
+	border: 1px solid #D6E0EA;
+}
+.header-search-icon{
+	stroke:#061726;
+	fill:#061726;
+}.header-user-info{display:none;}
+.header-user{
+	text-align:left;
+}
+i.header-user-img, svg.header-user-img {
+	display: block;
+	flex-shrink: 0;
+	font-size: 2.6rem; width: 2.6rem; height: 2.6rem;
+	padding:0.35rem;
+}.navs{
+	position:fixed;
+	top:4rem;
+	width:100%;
+	z-index:100;
+}
+.hover-menu{
+	position:absolute;
+	background:#fff;
+	width:16rem;
+	padding: 0.5rem 0;
+	box-sizing: border-box;
+	box-shadow: 0 0 3rem 1rem rgba(6, 23, 38, 0.1);
+	overflow: hidden auto;
+	border: 1px solid #D6E0EA;
+	border-radius: 0 0 5px 5px;
+}
+.hover-menu a {
+	color: #1f2e3c;
+}
+.cxm {
+	border-radius: 5px;
+}
+#main-menu{
+	display:none;
+	position:fixed;
+	left: 0;
+	top: 4rem;
+	bottom: 0;
+	background: #F3F5F8;
+	width: 20rem;
+	transition: width 200ms;
+	border-radius: 0;
+    font-size: 15px;
+	padding-bottom: 3rem;
+}
+#main-menu.pop-show{
+	display:block;
+}
+#main-menu.main-menu-nav-collapsed::-webkit-scrollbar {
+	display: none;
+}
+#main-menu.main-menu-nav-collapsed {
+	min-width: 0;
+	width: 80px;
+	-ms-overflow-style: none;
+    scrollbar-width: none;
+}.main-menu-item,
+.cmi,
+.cmx__section-head {
+	display:block;
+	padding: 8px 1rem;
+	max-width: 100%;
+	outline-offset: -3px;
+}
+a.main-menu-item {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	color: inherit;
+}
+a.main-menu-item-channel {
+	display: flex;
+	align-items: center;
+	color: #1f2e3c;
+	font-size: 13px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-weight: 400;
+}
+.main-menu-item-channel .user-image {
+	margin-right: 0.75rem;
+}
+.main-menu-item-channel-label {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+/* cxm = context menu */
+#context-menu-mountpoint {
+	position: relative;
+}
+.cxm {
+	position: absolute;
+	z-index: 98;
+}
+.cmx__section-head,
+.main-menu-heading {
+    color: #000;
+	cursor: default;
+	font-weight: 600;
+}
+.cmx__section-head {
+}
+/* cmi = context menu item */
+.cmi {
+	appearance: none;
+	text-align: left;
+	white-space: normal;
+	width: 100%;
+}
+.cmi + .cmx__section-head {
+	margin-top: 0.3rem;
+	border-top: 1px solid #D6E0EA;
+    padding-top: 0.7rem;
+}
+.main-menu-item-important{
+	color: #D14900;
+}
+.main-menu-item:not(.main-menu-item--active):hover,
+.cmi:not(.cmi--active):hover,
+.cmi:not(.cmi--active):focus-visible {
+	color: #1f2e3c;
+	background-color: #8dd44728;
+	text-decoration:none;
+}
+.cmi.cmi--info {
+    color: #666;
+    font-size: 1rem;
+}
+.cmi.cmi--info:hover {
+    background: transparent;
+    color: #666;
+}
+.main-menu-heading {
+	border-top:1px solid #D6E0EA;
+	padding: 1.2rem 1rem 0.8rem;
+	margin: 0.9rem 0 0 0;
+	position: relative;
+}
+.main-menu-heading-extra{
+	position: absolute;
+	bottom: 0.9rem;
+	right: 1rem;
+	font-size:12px;
+	color: #495A6A;
+}
+:any-link > .main-menu-heading {
+	cursor: pointer;
+}
+.main-menu-icon{
+	width:20px;
+	height:20px;
+	margin-right:1rem;
+	position:relative;
+	top: 0.3rem;
+	stroke: #061726;
+	stroke-width:2px;
+	stroke-linejoin:round;
+	stroke-linecap:round;
+	fill:none;
+}
+.main-menu-item:hover:not(.main-menu-item--active) > .main-menu-icon {
+	stroke: #061726;
+	color: #061726;
+}
+
+.main-menu-item--active {
+	background: #85C742;
+	color: #fff;
+	cursor: default;
+}
+a.main-menu-item--active {
+	color: #fff;
+}
+.main-menu-item--active .main-menu-icon {
+	stroke: currentColor;
+}
+.main-menu-item--active:hover {
+	text-decoration: none;
+}
+.main-menu-signout {
+	margin: 1rem 0 1.25rem;
+}
+
+.with-permanent-menu-expanded main {
+	margin-left: 22rem;
+}.user-image {
+	font-size: 24px;
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+}i.user-image--img {
+	display: block;
+	box-sizing: border-box;
+	border: 1px solid #eee;
+	border-radius: 50%;
+	background-color: white;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}i.user-image--img--id-d2d93b432f495024926b02c3e738fffc { background-image: url(https://sp.rmbl.ws/z8/5/s/R/c/5sRca.baa-RonPaulLibertyReport-qqhg5g.jpeg); }i.user-image--img--id-15e4695bfd8ca972b52c81e07db17606 { background-image: url(https://sp.rmbl.ws/z8/n/H/i/h/nHiha.baa.1-ScaryInteresting-rhkzpx.jpeg); }i.user-image--img--id-ee981c0be4c867bc32bb44fa1e2606d0 { background-image: url(https://sp.rmbl.ws/z8/P/P/4/g/PP4ga.baa.1-LofiGirl-rgc0xz.jpeg); }i.user-image--img--id-494471cd4d50b7874af011d5e2e17df6 { background-image: url(https://sp.rmbl.ws/z8/w/7/y/l/w7yla.baa-KaiCenat-rupqgb.jpeg); }i.user-image--img--id-054adf32c86d325343d0fede865790ae { background-image: url(https://sp.rmbl.ws/z8/0/H/2/k/0H2ka.baa.2-OTKnetwork-rtbvpq.png); }i.user-image--img--id-a028060d28a65a542d26cee2d12a9a63 { background-image: url(https://sp.rmbl.ws/z8/V/b/-/g/Vb-ga.baa.2-TateSpeech-rh39nn.jpeg); }i.user-image--img--id-e596dbfef046243c5028ff12890d0280 { background-image: url(https://sp.rmbl.ws/z8/k/N/n/f/kNnfa.baa-KimIversen-r6nek8.png); }i.user-image--img--id-196e9086f0d9ff69709ca7d3d6c06266 { background-image: url(https://sp.rmbl.ws/z8/q/B/S/i/qBSia.baa-WeAreChange-rofhl5.png); }i.user-image--img--id-af15edcdf6f27feee39c2a5f3f1b9241 { background-image: url(https://sp.rmbl.ws/z8/Y/m/a/j/Ymaja.baa-KimberlyGuilfoyle-rpgw1n.jpeg); }i.user-image--img--id-7b4c2f3500558a04644383651ffb2f63 { background-image: url(https://sp.rmbl.ws/z8/o/l/i/f/olifa.baa-AmericanSongwriter-r62stq.jpeg); }i.user-image--img--id-cbbd2ebfe3edca3bddd839ec89406ecc { background-image: url(https://sp.rmbl.ws/z8/n/l/u/e/nluea.baa-GrantCardone-qzzuyc.jpeg); }i.user-image--img--id-1acc143612be651c2b94795317f48fd7 { background-image: url(https://sp.rmbl.ws/z8/Z/n/y/e/Znyea.baa-MedicalMedium-r0ikme.jpeg); }i.user-image--img--id-dbf3023b2e1bf39d7f2bdecc0f41086d { background-image: url(https://sp.rmbl.ws/z8/D/C/v/h/DCvha.baa.1-stevewilldoit-rikd4o.jpeg); }i.user-image--img--id-83a291256935de3d298a37add3f07d7d { background-image: url(https://sp.rmbl.ws/z8/u/O/o/f/uOofa.baa-Homesteadonomics-r6r40v.jpeg); }i.user-image--img--id-8a6cc41ebfbadb889bb97b339776fafa { background-image: url(https://sp.rmbl.ws/z8/o/N/h/f/oNhfa.baa-TheHeritageFoundation-r60mtr.png); }i.user-image--img--id-3fa03745430051fa79b954bfee78bfdd { background-image: url(https://sp.rmbl.ws/z8/b/H/t/e/bHtea.baa-HonestReportingCanada-rgvlzn.png); }i.user-image--img--id-745ea32084c37fedc1ac915fcfcf650a { background-image: url(https://sp.rmbl.ws/z8/7/V/P/f/7VPfa.baa-SpencerCornelia-r95mh4.jpeg); }i.user-image--img--id-a5141b131a9c08bf58d23c3144281c9b { background-image: url(https://sp.rmbl.ws/z8/k/t/Q/i/ktQia.baa-PeteHegseth-roacra.jpeg); }i.user-image--img--id-7f0183b560cfd61b3e7b34cb4eca445f { background-image: url(https://sp.rmbl.ws/z8/N/S/P/f/NSPfa.baa-MysteryScoop-r95gs3.jpeg); }i.user-image--img--id-749c6a9cb9832394526952e063582c19 { background-image: url(https://sp.rmbl.ws/z8/H/p/l/h/Hplha.baa.1-BohoBeautiful-rizbw9.jpeg); }i.user-image--img--id-f77a0d92c84e68aedfa5f76027da3146 { background-image: url(https://sp.rmbl.ws/z8/B/K/f/g/BKfga.baa.2-PrimitiveSurvivalTools-raxafl.jpeg); }i.user-image--img--id-e373d7e6ae554fc112fbbc0f8bfd446a { background-image: url(https://sp.rmbl.ws/z8/_/R/1/b/_R1ba.baa.1-RebelNews-rme5uh.png); }i.user-image--img--id-08a897698266ae38acd304be5e81299d { background-image: url(https://sp.rmbl.ws/z8/i/D/T/f/iDTfa.baa-ThinkBeforeYouSleep-r9izsw.jpeg); }i.user-image--img--id-605cb334e30e9bd2a864a6748dbc2813 { background-image: url(https://sp.rmbl.ws/z8/9/z/b/h/9zbha.baa.1-TalismanTate-rkd10w.jpeg); }i.user-image--img--id-2599a2810f77ff9c5a757f85533cfa5a { background-image: url(https://sp.rmbl.ws/z8/9/7/j/g/97jga.baa-TheChris-rb40kz.jpeg); }i.user-image--img--id-6f61d262e2ebac67647f147cd648b330 { background-image: url(https://sp.rmbl.ws/z8/C/R/C/e/CRCea.baa-TheJimmyDoreShow-r16pym.png); }i.user-image--img--id-e6e1bb18a2a8cdee721d8702626c9e6c { background-image: url(https://sp.rmbl.ws/z8/a/S/p/f/aSpfa.baa-NDWoodworkingArt-r6uhew.png); }i.user-image--img--id-f20c27ad50a3c7856f569af75bfa204d { background-image: url(https://sp.rmbl.ws/z8/2/v/r/k/2vrka.baa-UFConESPN-rsm10o.png); }i.user-image--img--id-771a50f8259622aaeda9f7374711cb1b { background-image: url(https://sp.rmbl.ws/z8/h/B/M/f/hBMfa.baa-MrScientific-r8rzkl.jpeg); }i.user-image--img--id-7b23924d9f8e3e3beeeaac0f7e8d14b3 { background-image: url(https://sp.rmbl.ws/z8/e/y/s/i/eysia.baa.1-CryptosRus-rm3f9n.jpeg); }i.user-image--img--id-e558838de029af42f227a31ad66c1d7d { background-image: url(https://sp.rmbl.ws/z8/5/6/W/g/56Wga.baa.1-robbraxman-rfyjpm.png); }i.user-image--img--id-bc480544e7be286ca35bb780ca28abc4 { background-image: url(https://sp.rmbl.ws/z8/N/P/0/f/NP0fa.baa.2-Redacted-rf6g0q.png); }i.user-image--img--id-089594f83ebb1d0df53788a1eaffd4b3 { background-image: url(https://sp.rmbl.ws/z8/l/w/T/h/lwTha.baa.2-69STREAM-rrjdpv.png); }i.user-image--img--id-d50f88efc8fd58fc6ca34bd977c52c3a { background-image: url(https://sp.rmbl.ws/z8/F/O/a/a/FOaaa.baa.2-UFC-rsvjck.jpeg); }i.user-image--img--id-8135d5e519e846639023823e7150886f { background-image: url(https://sp.rmbl.ws/z8/N/k/w/b/Nkwba.baa.2-DrewHernandez-rjvqe7.jpeg); }i.user-image--img--id-942c64d733e14aca536598c7d01444d3 { background-image: url(https://sp.rmbl.ws/z8/r/6/2/d/r62da.baa.1-RubinReport-rvl57c.jpeg); }i.user-image--img--id-4ee70091c83042dd81e0cb7130f8106b { background-image: url(https://sp.rmbl.ws/z8/3/3/K/g/33Kga.baa-Gabe-reiecn.jpeg); }i.user-image--img--id-982c1226780f072fc0b7e1c7ffd35694 { background-image: url(https://sp.rmbl.ws/z8/O/V/G/l/OVGla.baa.1-FREESTYLEBENDER-rufgkn.jpeg); }i.user-image--img--id-31863314b42e2e4f2d4f635f9381dc72 { background-image: url(https://sp.rmbl.ws/z8/Z/0/G/f/Z0Gfa.baa-Chubbyemu-r87046.png); }i.user-image--img--id-60b1f3d45e2ade67247ff943a1f08989 { background-image: url(https://sp.rmbl.ws/z8/r/q/u/f/rqufa.baa-HeresyFinancial-r73guh.jpeg); }i.user-image--img--id-074acadd038d3a1ea22f484a00e72f40 { background-image: url(https://sp.rmbl.ws/z8/D/m/2/l/Dm2la.baa.1-darkhorse-rvazi6.png); }i.user-image--letter { display: inline-block; box-sizing: border-box; border: 1px solid #eee; border-radius: 50%; background-color: #37c; flex-shrink: 0; }
+i.user-image--letter:after { display: block; text-align: center; margin-top: 50%; transform: translateY(-50%); font-style: normal; content: attr(data-letter); text-transform: capitalize; font-weight: bold; color: white; font-size: 75%; line-height: 1; }i.user-image--img--id-0c34530bcebcb06d866e0d1c6d6a854c { background-image: url(https://sp.rmbl.ws/z8/h/p/y/f/hpyfa.baa-Shaun-r7en25.jpeg); }i.user-image--img--id-2ba0e3c10c20da045656187e99b50b7b { background-image: url(https://sp.rmbl.ws/z8/x/S/N/f/xSNfa.baa-BitcoinMagazine-r8wnw8.jpeg); }i.user-image--img--id-6474273e591d70386d112375e14c5aec { background-image: url(https://sp.rmbl.ws/z8/f/u/E/c/fuEca.baa.1-TheWhyFiles-rpovim.png); }i.user-image--img--id-49cbead78bbfc922e532015350e88fae { background-image: url(https://sp.rmbl.ws/z0/9/A/y/n/9Ayne.asF-161k8t-rd4d76.jpeg); }i.user-image--img--id-5dc686f428fddd5aa0d369957bfa4edd { background-image: url(https://sp.rmbl.ws/z8/L/H/f/h/LHfha.baa-BeyondScience-rhej6k.jpeg); }i.user-image--img--id-7cebd96bfcc8f5301f66b82d81ff1d3e { background-image: url(https://sp.rmbl.ws/z8/B/0/u/c/B0uca.baa.1-BenShapiro-ro39su.jpeg); }i.user-image--img--id-c62fb6a3739c5940eba1d6e429838ac4 { background-image: url(https://sp.rmbl.ws/z8/g/D/5/d/gD5da.baa.2-GGreenwald-rml416.png); }i.user-image--img--id-54d4bcd52419410f53ed992ca8fb1a52 { background-image: url(https://sp.rmbl.ws/z8/O/j/2/i/Oj2ia.baa-trilogymediainc-rox4oj.png); }.foot {
+    box-shadow: 0 -1px 0 #d6e0ea;
+    background: #fff;
+}
+
+.foot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+}
+
+@media(max-width:699.95px) {
+    .foot {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1.5rem 1rem;
+    }
+}
+
+.foot__nav, .foot__legal {
+    padding: 0.4em 0.5em;
+}
+@media(max-width:699.95px) {
+    .foot__nav, .foot__legal {
+        padding: 1em 0em;
+    }
+}
+.foot__nav-list,
+.foot__legal-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.foot__nav-list {
+    flex-direction: column;
+    font-weight: 600;
+}
+.foot__legal-list {
+    flex-direction: row;
+    justify-content: center;
+}
+@media(min-width:700px) {
+    .foot__nav-list {
+        flex-direction: row;
+    }
+}
+
+.foot__legal, .foot__copyright {
+    font-size: 12px;
+}
+
+.foot__copyright {
+    text-align: center;
+}
+.main-menu-mode-permanent main {
+	margin-left: 80px;
+}
+.main-menu-mode-permanent.main-menu-expanded main {
+	margin-left: 20rem;
+}
+@media(max-width:699.95px) {
+    .foot__legal, .foot__copyright {
+        width: 100%;
+    }
+}
+.foot__nav-item,
+.foot__legal-item {
+    display: block;
+    list-style-type: none;
+    padding: 0.5rem
+}
+.foot__nav-item {
+    white-space: nowrap;
+}
+
+.foot__nav-link,
+.foot__legal-link {
+    color: #0d2437;
+    outline-offset: 0.25em;
+    text-decoration: none;
+}
+
+.foot__logo {
+	display: block;
+    text-indent: -999px;
+    background-image: url('/img/rumble-full-logo-v4.svg');
+    background-repeat: no-repeat;
+    background-size: 96px 24px;
+    height: 24px;
+    width: 96px;
+    flex-shrink: 0;
+}
+
+@media(min-width:700px) {
+    .foot__logo {
+        background-repeat: no-repeat;
+        background-position: -3px;
+        background-size: auto;
+        height: 35px;
+        width: 35px;
+    }
+}@media(max-width:699.95px){.desktop-only{
+	display:none
+}}@media(max-width:1199.95px){.main-and-sidebar { display: block; }
+.sidebar { margin: 1rem 0 0 0; }
+.bottom-popup { position: fixed; left: 0; right: 0; top: 56px; bottom: 0; display: flex; flex-direction: column; z-index: 1; }
+#is-sidebar-open:checked + .bottom-popup { background-color: #f3f5f8; transition: background-color 0.15s linear; }
+#is-sidebar-open:not(:checked) + .bottom-popup { display: flex; top: unset; }
+#is-sidebar-open:not(:checked) + .bottom-popup .bottom-popup--header { background-color: rgba(0, 0, 0, 0.6); }
+.bottom-popup--header { text-align: center; }
+.bottom-popup--button { display: inline-block; margin: 0.5em; border-radius: 2em; background-color: black; color: white; padding: 0.5em 1.5em; text-transform: uppercase; }
+.bottom-popup .bottom-popup--header-text::before { content: "Filters"; }
+#is-sidebar-open:checked + .bottom-popup .bottom-popup--header-text::before { content: "Collapse"; }
+.bottom-popup--contents { display: none; flex: 1; overflow: auto; }
+@supports (-webkit-overflow-scrolling: touch) {
+	 .bottom-popup--contents { overflow-y: scroll; -webkit-overflow-scrolling: touch; }
+}
+#is-sidebar-open:checked + .bottom-popup .bottom-popup--contents { display: flex; flex-direction: column; justify-content: center; }
+.bottom-popup--sidebar { width: 100%; max-width: 336px; margin: 0 auto; min-height: 0 /* this is not a hack, but I can't explain wtf is this */; }
+
+.bottom-popup--arrow { margin: 0 0 0.125em 1em; display: inline-block; width: 0; height: 0; border-left: 0.5em solid transparent; border-right: 0.5em solid transparent; border-bottom: 0.5em solid white; }
+#is-sidebar-open:checked + .bottom-popup .bottom-popup--arrow {  border-bottom: 0; border-top: 0.5em solid white; }.main-and-sidebar { display: block; }
+.bottom-popup { position: fixed; left: 0; right: 0; top: 56px; bottom: 0; display: flex; flex-direction: column; z-index: 1; }
+#is-sidebar-open:checked + .bottom-popup { background-color: #f3f5f8; transition: background-color 0.15s linear; }
+#is-sidebar-open:not(:checked) + .bottom-popup { display: flex; top: unset; }
+#is-sidebar-open:not(:checked) + .bottom-popup .bottom-popup--header { background-color: rgba(0, 0, 0, 0.6); }
+.bottom-popup--header { text-align: center; }
+.bottom-popup--button { display: inline-block; margin: 0.5em; border-radius: 2em; background-color: black; color: white; padding: 0.5em 1.5em; text-transform: uppercase; }
+.bottom-popup .bottom-popup--header-text::before { content: "Filters"; }
+#is-sidebar-open:checked + .bottom-popup .bottom-popup--header-text::before { content: "Collapse"; }
+.bottom-popup--contents { display: none; flex: 1; overflow: auto; }
+@supports (-webkit-overflow-scrolling: touch) {
+	 .bottom-popup--contents { overflow-y: scroll; -webkit-overflow-scrolling: touch; }
+}
+#is-sidebar-open:checked + .bottom-popup .bottom-popup--contents { display: flex; flex-direction: column; justify-content: center; }
+.bottom-popup--sidebar { width: 100%; max-width: 336px; margin: 0 auto; min-height: 0 /* this is not a hack, but I can't explain wtf is this */; }
+
+.bottom-popup--arrow { margin: 0 0 0.125em 1em; display: inline-block; width: 0; height: 0; border-left: 0.5em solid transparent; border-right: 0.5em solid transparent; border-bottom: 0.5em solid white; }
+#is-sidebar-open:checked + .bottom-popup .bottom-popup--arrow {  border-bottom: 0; border-top: 0.5em solid white; }}@media(min-width:700px){.mobile-only{
+	display:none
+}.h1 {
+	font-size: 2.285714286rem;
+}
+.thirds{
+	display: flex;
+	flex-wrap: wrap;
+}
+.two-thirds, .one-thirds, .one-half{
+	display: flex;
+	flex-direction: column;
+	width:33.333333333%;
+}
+.two-thirds{
+	width:66.666666667%;
+}
+.one-half{
+	width: 50%;
+}
+
+.round-button{
+	padding:0.85rem 1.3rem;
+	margin-left: 0.5rem;
+	margin-right: 0.5rem;
+	font-size:1rem;
+}.constrained{
+	padding-left: 2rem;
+	padding-right: 2rem;
+}.header-div{
+	padding: 0 2rem;
+}
+.main-menu-item,
+.main-menu-heading {
+	padding-left: 2rem;
+	padding-right: 2rem;
+	color: #061726;
+}
+.cmi, .cmx__section-head {
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+}
+.header-upload{
+	margin-left: auto;
+	margin-right: 2rem;
+}
+.header{
+	height: 5rem;
+}
+main {
+	margin-top: 5rem;
+}
+.header-logo{
+	width:10rem;
+	margin: 0 0 0 1rem;
+}.header-search-select,.header-search-field{display:block; font-size: 15px;}
+.header-search,.header-search.pop-show{
+	position:static;
+	box-sizing: border-box;
+	padding-left: 0.3rem;
+	padding-right: 0.3rem;
+	width: 40%;
+	margin-left: auto;
+	margin-right: auto;
+}
+.header-search{
+	border: 1px solid #D6E0EA;
+}.header-user{
+	display: flex;
+	align-items: center;
+}
+.header-user-name,.header-user-stat{
+	display:block;
+	color:#061726;
+}
+.header-user-name{
+	color:#061726;
+	padding:0.1rem 0 0.1rem;
+}
+.header-user-info{
+	display:inline-block;
+	margin-left:0.5rem;
+}.navs, #main-menu {
+	top: 5rem;
+}}@media(min-width:1200px){.main-and-sidebar { display: flex; }
+.sidebar { margin-left: 2rem; width: 336px; }
+.bottom-popup--header { display: none; }.main-and-sidebar { display: flex; }
+.bottom-popup--header { display: none; }}</style><link rel="stylesheet" data-theme-main-stylesheet="1" class="js-theme-ss js-theme-ss--dark" href="./Search results for_ obliviox_files/dark.css"><script async="" src="./Search results for_ obliviox_files/fbevents.js.download"></script><script>var $$={};var addThemeSwitcher;!function(){var c,r,i="system",s="light",h="dark",l=[h],o=[i,s,h],m=matchMedia("(prefers-color-scheme: dark)"),a=!1,d=!0,n=[],t=[];function u(){try{if(!a&&localStorage)return localStorage.getItem("themePreference")}catch(e){a=!0}}function f(){t.forEach(function(e){e(r)})}function $(){var e,t,a,n;c=c||u()||i,e=c==i?m.matches?h:s:0<=o.indexOf(c)?c:s,r!==(e=e)&&(r=e,l.indexOf(e)<0?(a=document.querySelectorAll("head .js-theme-ss"),Array.prototype.forEach.call(a,function(e){e.disabled=!0})):(t=!1,a="/c/themes/"+e+".css",n="js-theme-ss js-theme-ss--"+e,e=document.querySelectorAll(".js-theme-ss--"+e),Array.prototype.forEach.call(e,function(e){e.disabled=!1,e.dataset.themeMainStylesheet&&(t=!0)}),t||(d?document.write('<link rel=stylesheet data-theme-main-stylesheet="1" class="'+n+'" href="'+a+'" />'):((e=document.createElement("link")).rel="stylesheet",e.href=a,e.className=n,e.dataset.themeMainStylesheet="1",document.head.appendChild(e))))),f()}function y(){$$.each(n,function(){var e=this.getAttribute("data-theme")==c;$$[(e?"add":"remove")+"Class"](this,"main-menu-item--active")})}function p(e,t){(t=e.getAttribute("data-theme"))&&n.indexOf(e)<0&&(n.push(e),$$.addClick(e,function(e){return e.preventDefault(),e=t,a||localStorage.setItem("themePreference",e),c!=e&&(c=e,$(),y()),"overlay"==$$.main_menu.mode&&$$.query(".main-menu-toggle")[0].click(),!1}))}addThemeSwitcher=function(e,t){$$.each($$.query(e),function(){p(this)}),y(),t&&$$.each($$.query(t),function(){this.style.display="block"})},c=u()||i,$(),d=!1,m.addEventListener&&m.addEventListener("change",function(e){$()}),$$&&($$.applyThemePreference=$,$$.registerThemeCallback=function(e){t.push(e)})}();
+
+</script><script type="application/ld+json">[{"@context":"http://schema.org","@type":"WebSite","url":"https://rumble.com/","potentialAction":{"@type":"SearchAction","target":"https://rumble.com/search/video?q={search}","query-input":"required name=search"}},{"@context":"http://schema.org","@type":"Organization","name":"Rumble","url":"https://rumble.com/","logo":"https://rumble.com/i/rumble_logo_back.png","sameAs":["https://www.facebook.com/rumblevideo/","https://twitter.com/rumblevideo"]}]</script><meta name="description" content=""><meta name="robots" content="noindex"><meta property="fb:app_id" content="155223717937973"><meta name="twitter:site" content="@rumblevideo"><meta name="apple-itunes-app" content="app-id=1518427877"><meta property="og:title" content="Search results for: obliviox"><meta property="og:description" content=""><meta property="og:url" content="https://rumble.com/search/videos?q=obliviox"><link rel="shortcut icon" href="https://rumble.com/i/favicon-v4.png"><link rel="apple-touch-icon" href="https://rumble.com/apple-touch-icon.png"><script src="./Search results for_ obliviox_files/js" async=""></script></head>		<body cz-shortcut-listen="true">
+				<main>
+			<div class="constrained">
+				<style>
+					h1:hover{
+						cursor: pointer;
+					}
+				</style>				
+		<div class="main-and-sidebar">
+			<div style="flex: 1; margin-bottom: 1rem;">
+									<h1 style="color:green;" >Obliviox </h1>21.4k followers
+							</div>
+		</div>
+
+		<div class="main-and-sidebar">
+			<div style="flex: 1">
+				
+							</div>
+
+			<div class="sidebar">
+							<input type="checkbox" id="is-sidebar-open">
+			<div class="bottom-popup" data-is-open="">
+				<label class="bottom-popup--header" for="is-sidebar-open">
+						<span class="bottom-popup--button">
+							<span class="bottom-popup--header-text"></span>
+							<span class="bottom-popup--arrow"></span>
+						</span>
+				</label>
+				<div class="bottom-popup--contents">
+					<div class="bottom-popup--sidebar">
+						<nav class="tuner-box">
+													<div class="tuner-box--section">
+							<div class="tuner-box--section-header">Sort by</div>
+							<ul class="tuner-box--ul">
+																		<li>
+																							<span class="tuner-box--link tuner-box--link--current">Relevance<svg width="18" height="14" viewBox="0 0 18 14"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m17 1.2-11 11-5-5"></path></svg></span>
+																					</li>
+																			<li>
+																							<a class="tuner-box--link" href="https://rumble.com/search/videos?q=obliviox&amp;sort=date">Most recent</a>
+																					</li>
+																			<li>
+																							<a class="tuner-box--link" href="https://rumble.com/search/videos?q=obliviox&amp;sort=rumbles">Likes</a>
+																					</li>
+																			<li>
+																							<a class="tuner-box--link" href="https://rumble.com/search/videos?q=obliviox&amp;sort=views">Views</a>
+																					</li>
+																</ul>
+						</div>
+														
+											<div class="tuner-box--section">
+							<div class="tuner-box--section-header">Video Date</div>
+							<ul class="tuner-box--ul">
+																		<li>
+																							<a class="tuner-box--link" href="https://rumble.com/search/videos?q=obliviox&amp;date=today">Today</a>
+																					</li>
+																			<li>
+																							<a class="tuner-box--link" href="https://rumble.com/search/videos?q=obliviox&amp;date=this-week">Last week</a>
+																					</li>
+																			<li>
+																							<a class="tuner-box--link" href="https://rumble.com/search/videos?q=obliviox&amp;date=this-month">Last month</a>
+																					</li>
+																			<li>
+																							<a class="tuner-box--link" href="https://rumble.com/search/videos?q=obliviox&amp;date=this-year">Last year</a>
+																					</li>
+																			<li>
+																							<span class="tuner-box--link tuner-box--link--current">All Time<svg width="18" height="14" viewBox="0 0 18 14"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m17 1.2-11 11-5-5"></path></svg></span>
+																					</li>
+																</ul>
+						</div>
+														
+											<div class="tuner-box--section">
+							<div class="tuner-box--section-header">Duration</div>
+							<ul class="tuner-box--ul">
+																		<li>
+																							<span class="tuner-box--link tuner-box--link--current">Any<svg width="18" height="14" viewBox="0 0 18 14"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m17 1.2-11 11-5-5"></path></svg></span>
+																					</li>
+																			<li>
+																							<a class="tuner-box--link" href="https://rumble.com/search/videos?q=obliviox&amp;duration=short">Short</a>
+																					</li>
+																			<li>
+																							<a class="tuner-box--link" href="https://rumble.com/search/videos?q=obliviox&amp;duration=long">Long</a>
+																					</li>
+																</ul>
+						</div>
+														
+											<div class="tuner-box--section">
+							<div class="tuner-box--section-header">License</div>
+							<ul class="tuner-box--ul">
+																		<li>
+																							<span class="tuner-box--link tuner-box--link--current">Any<svg width="18" height="14" viewBox="0 0 18 14"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m17 1.2-11 11-5-5"></path></svg></span>
+																					</li>
+																			<li>
+																							<a class="tuner-box--link" href="https://rumble.com/search/videos?q=obliviox&amp;license=now">License Now</a>
+																					</li>
+																</ul>
+						</div>
+												</nav>					</div>
+				</div>
+			</div>
+						</div>
+		</div>
+					</div>
+		</main>
+				<header class="header">
+			<div class="header-div">
+				<button class="main-menu-toggle" aria-label="main menu">
+					<svg class="main-menu-open" width="24" height="24"><path d="M1 4h22M1 12h22M1 20h22"></path></svg>					<svg class="main-menu-close" width="24" height="24"><path d="M20 4 4 20M4 4l16 16"></path></svg>				</button>
+				<a href="https://rumble.com/" class="header-logo">
+					<img src="./Search results for_ obliviox_files/rumble-full-logo-v4.svg" id="logo_light" alt="Rumble">
+					<img hidden="" src="./Search results for_ obliviox_files/rumble-full-logo-v4-dark.svg" id="logo_dark" alt="Rumble">
+				</a>
+						<form class="header-search">
+			<input type="search" class="header-search-field" name="query" placeholder="Search" value="obliviox">
+			<button class="header-search-submit" aria-label="search Rumble">
+				<svg class="header-search-icon" viewBox="0 0 26 26"><path fill="none" stroke-linecap="round" stroke-width="2" d="M17.6 17.6l6.3 6.3M2.2 11.2a9 9 0 1 0 18 0 9 9 0 1 0-18 0"></path></svg>			</button>
+		</form>
+		
+				<div class="header-user-actions">
+				
+									<button class="header-user round-button transparent-button">Sign In</button>
+			<button class="round-button ringed-button" onclick="location.assign(&#39;/register.php&#39;)">Sign Up
+			</button>
+								</div>
+			</div>
+		</header>
+				<nav class="navs">
+			<div style="position:relative">
+				<div id="main-menu" class="hover-menu main-menu-nav">
+							<a class="main-menu-item" href="https://rumble.com/"><svg class="main-menu-icon" width="20" height="20" viewBox="0 0 20 20"><path d="M2.5 7.5 10 1.7l7.5 5.8v9.2a1.7 1.7 0 0 1-1.7 1.6H4.2a1.7 1.7 0 0 1-1.7-1.6V7.5Zm5 10.8V10h5v8.3"></path></svg>Home</a>
+					<a class="main-menu-item" href="https://rumble.com/videos?date=this-week"><svg class="main-menu-icon" width="20" height="20" viewBox="0 0 20 20"><path fill="none" d="M10 18.33a8.33 8.33 0 1 0 0-16.66 8.33 8.33 0 0 0 0 16.66Z"></path>
+<path fill="none" d="M10 5v5l3.33 1.67"></path>
+<clippath><path fill="none" d="M0 0h20v20H0z"></path></clippath></svg>Latest</a>
+				<a class="main-menu-item" href="https://rumble.com/editor-picks">
+			<svg class="main-menu-icon" width="23" height="22" viewBox="-1 -2 23 22"><path fill="none" stroke-linecap="round" stroke-linejoin="round" d="M16.25 17.5v-1.67a3.33 3.33 0 0 0-3.33-3.33H7.08a3.33 3.33 0 0 0-3.33 3.33v1.67M10 9.17a3.33 3.33 0 1 0 0-6.67 3.33 3.33 0 0 0 0 6.67ZM15.17 9.17l1.66 1.66 3.34-3.33"></path></svg><span class="main-menu-item-label">Editor Picks</span><span class="main-menu-item-label-collapsed">Picks</span>
+		</a>
+		<a class="main-menu-item" href="https://rumble.com/videos?sort=views&amp;date=today"><svg class="main-menu-icon" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="m23 6-9.5 9.5-5-5L1 18M17 6h6v6"></path></svg>Trending</a>
+		<h3 class="main-menu-heading">
+				<span class="main-menu-item-label">Featured Channels</span>
+				<span class="main-menu-item-label-collapsed">Featured</span>
+				</h3>								<a class="main-menu-item main-menu-item-channel" title="The Ron Paul Liberty Report" href="https://rumble.com/c/RonPaulLibertyReport">
+					<i class="user-image user-image--img user-image--img--id-d2d93b432f495024926b02c3e738fffc"></i>					<span class="main-menu-item-label main-menu-item-channel-label">The Ron Paul Liberty Report</span>
+				</a>
+											<a class="main-menu-item main-menu-item-channel" title="Scary Interesting" href="https://rumble.com/c/ScaryInteresting">
+					<i class="user-image user-image--img user-image--img--id-15e4695bfd8ca972b52c81e07db17606"></i>					<span class="main-menu-item-label main-menu-item-channel-label">Scary Interesting</span>
+				</a>
+											<a class="main-menu-item main-menu-item-channel" title="Lofi Girl" href="https://rumble.com/c/LofiGirl">
+					<i class="user-image user-image--img user-image--img--id-ee981c0be4c867bc32bb44fa1e2606d0"></i>					<span class="main-menu-item-label main-menu-item-channel-label">Lofi Girl</span>
+				</a>
+											<a class="main-menu-item main-menu-item-channel" title="Kai Cenat" href="https://rumble.com/c/KaiCenat">
+					<i class="user-image user-image--img user-image--img--id-494471cd4d50b7874af011d5e2e17df6"></i>					<span class="main-menu-item-label main-menu-item-channel-label">Kai Cenat</span>
+				</a>
+											<a class="main-menu-item main-menu-item-channel" title="OTKnetwork" href="https://rumble.com/c/OTKnetwork">
+					<i class="user-image user-image--img user-image--img--id-054adf32c86d325343d0fede865790ae"></i>					<span class="main-menu-item-label main-menu-item-channel-label">OTKnetwork</span>
+				</a>
+											<a class="main-menu-item main-menu-item-channel" title="TateSpeech by Andrew Tate" href="https://rumble.com/c/TateSpeech">
+					<i class="user-image user-image--img user-image--img--id-a028060d28a65a542d26cee2d12a9a63"></i>					<span class="main-menu-item-label main-menu-item-channel-label">TateSpeech by Andrew Tate</span>
+				</a>
+											<a class="main-menu-item main-menu-item-channel" title="Kim Iversen" href="https://rumble.com/c/KimIversen">
+					<i class="user-image user-image--img user-image--img--id-e596dbfef046243c5028ff12890d0280"></i>					<span class="main-menu-item-label main-menu-item-channel-label">Kim Iversen</span>
+				</a>
+											<a class="main-menu-item main-menu-item-channel" title="WeAreChange" href="https://rumble.com/c/WeAreChange">
+					<i class="user-image user-image--img user-image--img--id-196e9086f0d9ff69709ca7d3d6c06266"></i>					<span class="main-menu-item-label main-menu-item-channel-label">WeAreChange</span>
+				</a>
+											<a class="main-menu-item main-menu-item-channel" title="Kimberly Guilfoyle" href="https://rumble.com/c/KimberlyGuilfoyle">
+					<i class="user-image user-image--img user-image--img--id-af15edcdf6f27feee39c2a5f3f1b9241"></i>					<span class="main-menu-item-label main-menu-item-channel-label">Kimberly Guilfoyle</span>
+				</a>
+											<a class="main-menu-item main-menu-item-channel" title="American Songwriter" href="https://rumble.com/c/AmericanSongwriter">
+					<i class="user-image user-image--img user-image--img--id-7b4c2f3500558a04644383651ffb2f63"></i>					<span class="main-menu-item-label main-menu-item-channel-label">American Songwriter</span>
+				</a>
+											<a class="main-menu-item main-menu-item-channel" title="Grant Cardone" href="https://rumble.com/c/GrantCardone">
+					<i class="user-image user-image--img user-image--img--id-cbbd2ebfe3edca3bddd839ec89406ecc"></i>					<span class="main-menu-item-label main-menu-item-channel-label">Grant Cardone</span>
+				</a>
+											<a class="main-menu-item main-menu-item-channel" title="Medical Medium" href="https://rumble.com/c/MedicalMedium">
+					<i class="user-image user-image--img user-image--img--id-1acc143612be651c2b94795317f48fd7"></i>					<span class="main-menu-item-label main-menu-item-channel-label">Medical Medium</span>
+				</a>
+											<a class="main-menu-item main-menu-item-channel" title="stevewilldoit" href="https://rumble.com/c/stevewilldoit">
+					<i class="user-image user-image--img user-image--img--id-dbf3023b2e1bf39d7f2bdecc0f41086d"></i>					<span class="main-menu-item-label main-menu-item-channel-label">stevewilldoit</span>
+				</a>
+											<a class="main-menu-item main-menu-item-channel" title="Homesteadonomics" href="https://rumble.com/c/Homesteadonomics">
+					<i class="user-image user-image--img user-image--img--id-83a291256935de3d298a37add3f07d7d"></i>					<span class="main-menu-item-label main-menu-item-channel-label">Homesteadonomics</span>
+				</a>
+											<a class="main-menu-item main-menu-item-channel" title="The Heritage Foundation" href="https://rumble.com/c/TheHeritageFoundation">
+					<i class="user-image user-image--img user-image--img--id-8a6cc41ebfbadb889bb97b339776fafa"></i>					<span class="main-menu-item-label main-menu-item-channel-label">The Heritage Foundation</span>
+				</a>
+											<a class="main-menu-item main-menu-item-channel" title="HonestReporting Canada" href="https://rumble.com/c/HonestReportingCanada">
+					<i class="user-image user-image--img user-image--img--id-3fa03745430051fa79b954bfee78bfdd"></i>					<span class="main-menu-item-label main-menu-item-channel-label">HonestReporting Canada</span>
+				</a>
+											<a class="main-menu-item main-menu-item-channel" title="Spencer Cornelia" href="https://rumble.com/c/SpencerCornelia">
+					<i class="user-image user-image--img user-image--img--id-745ea32084c37fedc1ac915fcfcf650a"></i>					<span class="main-menu-item-label main-menu-item-channel-label">Spencer Cornelia</span>
+				</a>
+											<a class="main-menu-item main-menu-item-channel" title="Pete Hegseth" href="https://rumble.com/c/PeteHegseth">
+					<i class="user-image user-image--img user-image--img--id-a5141b131a9c08bf58d23c3144281c9b"></i>					<span class="main-menu-item-label main-menu-item-channel-label">Pete Hegseth</span>
+				</a>
+											<a class="main-menu-item main-menu-item-channel" title="Mystery Scoop" href="https://rumble.com/c/MysteryScoop">
+					<i class="user-image user-image--img user-image--img--id-7f0183b560cfd61b3e7b34cb4eca445f"></i>					<span class="main-menu-item-label main-menu-item-channel-label">Mystery Scoop</span>
+				</a>
+											<a class="main-menu-item main-menu-item-channel" title="Boho Beautiful Yoga" href="https://rumble.com/c/BohoBeautiful">
+					<i class="user-image user-image--img user-image--img--id-749c6a9cb9832394526952e063582c19"></i>					<span class="main-menu-item-label main-menu-item-channel-label">Boho Beautiful Yoga</span>
+				</a>
+											<a class="main-menu-item main-menu-item-channel" title="Primitive Survival Tool" href="https://rumble.com/c/PrimitiveSurvivalTools">
+					<i class="user-image user-image--img user-image--img--id-f77a0d92c84e68aedfa5f76027da3146"></i>					<span class="main-menu-item-label main-menu-item-channel-label">Primitive Survival Tool</span>
+				</a>
+											<a class="main-menu-item main-menu-item-channel" title="Rebel News" href="https://rumble.com/c/RebelNews">
+					<i class="user-image user-image--img user-image--img--id-e373d7e6ae554fc112fbbc0f8bfd446a"></i>					<span class="main-menu-item-label main-menu-item-channel-label">Rebel News</span>
+				</a>
+											<a class="main-menu-item main-menu-item-channel" title="Think Before You Sleep" href="https://rumble.com/c/ThinkBeforeYouSleep">
+					<i class="user-image user-image--img user-image--img--id-08a897698266ae38acd304be5e81299d"></i>					<span class="main-menu-item-label main-menu-item-channel-label">Think Before You Sleep</span>
+				</a>
+											<a class="main-menu-item main-menu-item-channel" title="TalismanTate" href="https://rumble.com/c/TalismanTate">
+					<i class="user-image user-image--img user-image--img--id-605cb334e30e9bd2a864a6748dbc2813"></i>					<span class="main-menu-item-label main-menu-item-channel-label">TalismanTate</span>
+				</a>
+											<a class="main-menu-item main-menu-item-channel" title="The Chris Salcedo Show" href="https://rumble.com/c/TheChrisSalcedoShow">
+					<i class="user-image user-image--img user-image--img--id-2599a2810f77ff9c5a757f85533cfa5a"></i>					<span class="main-menu-item-label main-menu-item-channel-label">The Chris Salcedo Show</span>
+				</a>
+											<a class="main-menu-item main-menu-item-channel" title="The Jimmy Dore Show" href="https://rumble.com/c/TheJimmyDoreShow">
+					<i class="user-image user-image--img user-image--img--id-6f61d262e2ebac67647f147cd648b330"></i>					<span class="main-menu-item-label main-menu-item-channel-label">The Jimmy Dore Show</span>
+				</a>
+											<a class="main-menu-item main-menu-item-channel" title="ND - Woodworking Art" href="https://rumble.com/c/NDWoodworkingArt">
+					<i class="user-image user-image--img user-image--img--id-e6e1bb18a2a8cdee721d8702626c9e6c"></i>					<span class="main-menu-item-label main-menu-item-channel-label">ND - Woodworking Art</span>
+				</a>
+											<a class="main-menu-item main-menu-item-channel" title="UFC on ESPN" href="https://rumble.com/c/UFConESPN">
+					<i class="user-image user-image--img user-image--img--id-f20c27ad50a3c7856f569af75bfa204d"></i>					<span class="main-menu-item-label main-menu-item-channel-label">UFC on ESPN</span>
+				</a>
+											<a class="main-menu-item main-menu-item-channel" title="Mr Scientific" href="https://rumble.com/c/MrScientific">
+					<i class="user-image user-image--img user-image--img--id-771a50f8259622aaeda9f7374711cb1b"></i>					<span class="main-menu-item-label main-menu-item-channel-label">Mr Scientific</span>
+				</a>
+											<a class="main-menu-item main-menu-item-channel" title="CryptosRus" href="https://rumble.com/c/CryptosRus">
+					<i class="user-image user-image--img user-image--img--id-7b23924d9f8e3e3beeeaac0f7e8d14b3"></i>					<span class="main-menu-item-label main-menu-item-channel-label">CryptosRus</span>
+				</a>
+											<a class="main-menu-item main-menu-item-channel" title="Rob Braxman Tech" href="https://rumble.com/c/robbraxman">
+					<i class="user-image user-image--img user-image--img--id-e558838de029af42f227a31ad66c1d7d"></i>					<span class="main-menu-item-label main-menu-item-channel-label">Rob Braxman Tech</span>
+				</a>
+											<a class="main-menu-item main-menu-item-channel" title="Redacted News" href="https://rumble.com/c/Redacted">
+					<i class="user-image user-image--img user-image--img--id-bc480544e7be286ca35bb780ca28abc4"></i>					<span class="main-menu-item-label main-menu-item-channel-label">Redacted News</span>
+				</a>
+											<a class="main-menu-item main-menu-item-channel" title="6ix9ine" href="https://rumble.com/c/69STREAMS">
+					<i class="user-image user-image--img user-image--img--id-089594f83ebb1d0df53788a1eaffd4b3"></i>					<span class="main-menu-item-label main-menu-item-channel-label">6ix9ine</span>
+				</a>
+											<a class="main-menu-item main-menu-item-channel" title="UFC - Ultimate Fighting Championship" href="https://rumble.com/c/UFC">
+					<i class="user-image user-image--img user-image--img--id-d50f88efc8fd58fc6ca34bd977c52c3a"></i>					<span class="main-menu-item-label main-menu-item-channel-label">UFC - Ultimate Fighting Championship</span>
+				</a>
+											<a class="main-menu-item main-menu-item-channel" title="Drew Hernandez" href="https://rumble.com/c/DrewHernandez">
+					<i class="user-image user-image--img user-image--img--id-8135d5e519e846639023823e7150886f"></i>					<span class="main-menu-item-label main-menu-item-channel-label">Drew Hernandez</span>
+				</a>
+											<a class="main-menu-item main-menu-item-channel" title="The Rubin Report" href="https://rumble.com/c/RubinReport">
+					<i class="user-image user-image--img user-image--img--id-942c64d733e14aca536598c7d01444d3"></i>					<span class="main-menu-item-label main-menu-item-channel-label">The Rubin Report</span>
+				</a>
+											<a class="main-menu-item main-menu-item-channel" title="Gabe Poirot" href="https://rumble.com/c/GabePoirot">
+					<i class="user-image user-image--img user-image--img--id-4ee70091c83042dd81e0cb7130f8106b"></i>					<span class="main-menu-item-label main-menu-item-channel-label">Gabe Poirot</span>
+				</a>
+											<a class="main-menu-item main-menu-item-channel" title="FREESTYLEBENDER" href="https://rumble.com/c/FREESTYLEBENDER">
+					<i class="user-image user-image--img user-image--img--id-982c1226780f072fc0b7e1c7ffd35694"></i>					<span class="main-menu-item-label main-menu-item-channel-label">FREESTYLEBENDER</span>
+				</a>
+											<a class="main-menu-item main-menu-item-channel" title="Chubbyemu" href="https://rumble.com/c/Chubbyemu">
+					<i class="user-image user-image--img user-image--img--id-31863314b42e2e4f2d4f635f9381dc72"></i>					<span class="main-menu-item-label main-menu-item-channel-label">Chubbyemu</span>
+				</a>
+											<a class="main-menu-item main-menu-item-channel" title="Heresy Financial" href="https://rumble.com/c/HeresyFinancial">
+					<i class="user-image user-image--img user-image--img--id-60b1f3d45e2ade67247ff943a1f08989"></i>					<span class="main-menu-item-label main-menu-item-channel-label">Heresy Financial</span>
+				</a>
+											<a class="main-menu-item main-menu-item-channel" title="Darkhorse Podcast" href="https://rumble.com/c/darkhorse">
+					<i class="user-image user-image--img user-image--img--id-074acadd038d3a1ea22f484a00e72f40"></i>					<span class="main-menu-item-label main-menu-item-channel-label">Darkhorse Podcast</span>
+				</a>
+											<a class="main-menu-item main-menu-item-channel" title="Xavier Kickz" href="https://rumble.com/c/XavierKickz">
+					<i class="user-image user-image--letter" data-letter="X"></i>					<span class="main-menu-item-label main-menu-item-channel-label">Xavier Kickz</span>
+				</a>
+											<a class="main-menu-item main-menu-item-channel" title="Shaun Attwood" href="https://rumble.com/c/ShaunAttwood">
+					<i class="user-image user-image--img user-image--img--id-0c34530bcebcb06d866e0d1c6d6a854c"></i>					<span class="main-menu-item-label main-menu-item-channel-label">Shaun Attwood</span>
+				</a>
+											<a class="main-menu-item main-menu-item-channel" title="Bitcoin Magazine" href="https://rumble.com/c/BitcoinMagazine">
+					<i class="user-image user-image--img user-image--img--id-2ba0e3c10c20da045656187e99b50b7b"></i>					<span class="main-menu-item-label main-menu-item-channel-label">Bitcoin Magazine</span>
+				</a>
+											<a class="main-menu-item main-menu-item-channel" title="The Why Files" href="https://rumble.com/c/TheWhyFiles">
+					<i class="user-image user-image--img user-image--img--id-6474273e591d70386d112375e14c5aec"></i>					<span class="main-menu-item-label main-menu-item-channel-label">The Why Files</span>
+				</a>
+											<a class="main-menu-item main-menu-item-channel" title="LockPickingLawyer" href="https://rumble.com/user/LockPickingLawyer">
+					<i class="user-image user-image--img user-image--img--id-49cbead78bbfc922e532015350e88fae"></i>					<span class="main-menu-item-label main-menu-item-channel-label">LockPickingLawyer</span>
+				</a>
+											<a class="main-menu-item main-menu-item-channel" title="Beyond Science" href="https://rumble.com/c/BeyondScience">
+					<i class="user-image user-image--img user-image--img--id-5dc686f428fddd5aa0d369957bfa4edd"></i>					<span class="main-menu-item-label main-menu-item-channel-label">Beyond Science</span>
+				</a>
+											<a class="main-menu-item main-menu-item-channel" title="Ben Shapiro" href="https://rumble.com/c/BenShapiro">
+					<i class="user-image user-image--img user-image--img--id-7cebd96bfcc8f5301f66b82d81ff1d3e"></i>					<span class="main-menu-item-label main-menu-item-channel-label">Ben Shapiro</span>
+				</a>
+											<a class="main-menu-item main-menu-item-channel" title="Glenn Greenwald" href="https://rumble.com/c/GGreenwald">
+					<i class="user-image user-image--img user-image--img--id-c62fb6a3739c5940eba1d6e429838ac4"></i>					<span class="main-menu-item-label main-menu-item-channel-label">Glenn Greenwald</span>
+				</a>
+											<a class="main-menu-item main-menu-item-channel" title="Trilogy Media" href="https://rumble.com/c/trilogymediainc">
+					<i class="user-image user-image--img user-image--img--id-54d4bcd52419410f53ed992ca8fb1a52"></i>					<span class="main-menu-item-label main-menu-item-channel-label">Trilogy Media</span>
+				</a>
+			<div hidden="" class="js-theme-option-group" style="display: block;">
+	<h3 class="main-menu-heading">Theme</h3>
+	<a class="main-menu-item js-theme-option main-menu-item--active" data-theme="system" href="https://rumble.com/search/all?q=obliviox"><svg class="main-menu-icon" width="24" height="24" viewBox="0 0 24 24"><path d="M12 1v2m0 18v2M4.2 4.2l1.4 1.4m12.8 12.8 1.4 1.4M1 12h2m18 0h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4M16 12.36A4 4 0 1 1 11.64 8 3.12 3.12 0 0 0 16 12.36Z"></path></svg><span class="main-menu-item-label">OS Default</span></a>
+	<a class="main-menu-item js-theme-option" data-theme="dark" href="https://rumble.com/search/all?q=obliviox"><svg class="main-menu-icon" width="24" height="24" viewBox="0 0 24 24"><path d="M12.1 4.1c.3-.4 0-.9-.5-.8a8.5 8.5 0 1 0 9.3 12.4c.3-.4-.1-.9-.6-.7A7 7 0 0 1 12 4.2Z"></path></svg><span class="main-menu-item-label">Dark Mode</span></a>
+	<a class="main-menu-item js-theme-option" data-theme="light" href="https://rumble.com/search/all?q=obliviox"><svg class="main-menu-icon" width="24" height="24" viewBox="0 0 24 24"><path d="M7 12a5 5 0 1 0 10 0 5 5 0 1 0-10 0m5-11v2m0 18v2M4.2 4.2l1.4 1.4m12.8 12.8 1.4 1.4M1 12h2m18 0h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"></path></svg><span class="main-menu-item-label">Light Mode</span></a>
+</div>
+						</div>
+								<div class="hover-menu header-upload-menu">
+					<a class="main-menu-item" href="https://rumble.com/upload.php"><svg class="main-menu-icon" viewBox="0 0 26 26"><path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.2 17.5s-2.7-3.1-1.9-7.1C3 6.8 5.9 3.9 9.9 3.9c3.5 0 5.1 1.6 6.2 2.7 1.1 1.1 1.4 3.5 1.4 3.5s2.7-.7 4.4.7 2.4 3.8 1.8 5.6-2.6 3.1-2.6 3.1M9 17.1l4.1-3.8 4.2 3.8m-4.2 5.4v-9.2"></path></svg>Upload Video</a>
+					<a class="main-menu-item" href="https://rumble.com/live?go-live"><svg class="main-menu-icon" width="20" viewBox="0 0 30 16"><path d="M8 4a8 8 0 0 0 0 8M4 1a14 14 0 0 0 0 14m18-3a8 8 0 0 0 0-8m4 11a14 14 0 0 0 0-14" stroke-width="2" stroke-linecap="round" fill="none"></path><circle cx="15" cy="8" r="2" stroke-width="4" fill="none"></circle></svg>Go Live</a>
+				</div>
+			</div>
+		</nav>
+				<footer class="page__footer foot">
+			<a class="foot__logo" href="https://rumble.com/">Rumble</a>
+
+			<nav class="foot__nav">
+				<ul class="foot__nav-list">
+					<li class="foot__nav-item">
+						<a target="_blank" rel="noopener" href="https://corp.rumble.com/">About Us</a></li>
+					<li class="foot__nav-item">
+						<a target="_blank" rel="noopener" href="https://corp.rumble.com/careers/">Careers</a></li>
+					<li class="foot__nav-item"><a rel="noopener" href="https://rumble.com/our-apps/">Our Apps</a></li>
+					<li class="foot__nav-item">
+						<a target="_blank" rel="noopener" href="https://help.rumble.com/">Developers</a></li>
+					<li class="foot__nav-item">
+						<a target="_blank" rel="noopener" href="https://ads.rumble.com/">Advertising</a></li>
+					<li class="foot__nav-item"><a target="_blank" rel="noopener" href="https://rumble.store/">Store</a>
+					</li>
+				</ul>
+			</nav>
+
+			<nav class="foot__legal">
+				<ul class="foot__legal-list">
+					<li class="foot__legal-item"><a rel="nofollow" href="https://rumble.com/s/terms">Terms &amp; Conditions</a></li>
+					<li class="foot__legal-item"><a rel="nofollow" href="https://rumble.com/s/privacy">Privacy Policy</a></li>
+					<li class="foot__legal-item"><a rel="nofollow" href="https://rumble.com/s/dmca">Copyright / DMCA</a></li>
+				</ul>
+			</nav>
+
+			<div class="foot__copyright">
+				<div class="u-deemphasized">Copyright © 2023 Rumble. All Rights Reserved.</div>
+			</div>
+		</footer>
+		<script>$$={query:function(e,n){return Array.isArray(e)&&(n=e[1],e=e[0]),n=n||document,"string"==typeof e?n.querySelectorAll(e):[e]},each:function(e,n){for(var t=0;t<e.length;t++)n.call(e[t])},gt:function(e){return(new Date).getTime()/(e?1e3:1)},getByClass:function(e){var n=$$.query("."+e);return 1<=n.length&&n[0]},isVisible:function(e){return 0<e.offsetWidth&&0<e.offsetHeight},addClass:function(e,n){return!e.classList.contains(n)&&(e.classList.toggle(n),!0)},removeClass:function(e,n){e.classList.remove(n)},addClick:function(e,t){var n,r=$$.query(e);if(r)for(n=0;n<r.length;n++)r[n]&&r[n].addEventListener("click",function(e){var n=t.call(this,e);return n||void 0===n||e.stopPropagation(),n})},addServiceClick:function(e,n,t,r,c){$$.addClick(e,function(e){e.preventDefault(),$$.serviceGet(n,t,r,c)})},urlQueryObject:function(){var t={};return"undefined"==typeof URLSearchParams||new URLSearchParams(location.search).forEach(function(e,n){t[n]=e}),t},urlEncodeData:function(e){var n,t="";for(n in e)e.hasOwnProperty(n)&&(t+=(t?"&":"")+encodeURIComponent(n)+"="+encodeURIComponent(e[n]));return t},include:function(e,n){var t=document.createElement("script");t.src=e,t.async=!0,n&&(t.onload=n),document.head.appendChild(t)},includeCSS:function(e){var n=document.createElement("link");n.type="text/css",n.rel="stylesheet",n.href=e,document.head.appendChild(n)}},$$.page_load_time=(new Date).getTime();
+
+$$.injectJSLib=function(e,t){var s=document.createElement("script");return s.defer=!0,s.text=t,"code"!=e&&(s.id="js-"+e,$$.includedJSLibs[e]=s),document.getElementsByTagName("head")[0].appendChild(s),s},$$.injectCSSLib=function(e,t){var s=document.createElement("style");return s.appendChild(document.createTextNode(t)),e&&(s.id="css-"+e,$$.includedCSSLibs[e]=s),(t=document.querySelector("head .js-theme-ss"))?t.insertAdjacentElement("beforebegin",s):document.getElementsByTagName("head")[0].appendChild(s),s},$$.request=function(e,t,s,n){var i=new XMLHttpRequest;n=n||function(){},i.open(t?"POST":"GET",e,!0),i.setRequestHeader("Content-type","application/x-www-form-urlencoded"),i.responseType="json",i.onload=function(){200==i.status?s(i.response):n&&n(i.status,i.response)},i.send(t?$$.urlEncodeData(t):null)},$$.requestGet=function(e,t,s){return $$.request(e,0,t,s)},$$.requestPost=function(e,t,s,n){return $$.request(e,t,s,n)},$$.serviceGet=function(e,t,s,n){return $$.serviceLoad("get",e,t,s,n)},$$.servicePost=function(e,t,s,n){return $$.serviceLoad("post",e,t,s,n)},$$.serviceLoad=function(i,o,c,r,e){"object"==typeof i&&(o=i.name||o,c=i.data||c,r=i.success||r,e=i.fail||e,i=i.type);var t,s,n,$=Math.floor(1e3*Math.random()),l="__service"+((new Date).getTime()-$$.page_load_time)+"_"+$,d=[],u=[],$=(o.subdomain?(t="https://"+(/\.rumble.com$/.test(location.host)?location.host:o.subdomain+".rumble.com")+"/service.php?",o=o.name):t="/service.php?",{});for(n in"post"==i?"object"==typeof c&&(c.get||c.post)&&(s=c.get,c=c.post):c&&(s=c),(s=$$.urlEncodeData(s))&&(t+=s+"&"),$.name=o,$$.includedJSLibs)d.push(n);for(n in 0<d.length&&($.included_js_libs=d.join(",")),$$.includedCSSLibs)u.push(n);0<u.length&&($.included_css_libs=u.join(","));function a(e){var t,s,n="";if(e.js_libs){for(t in e.js_libs)e.js_libs.hasOwnProperty(t)&&$$.injectJSLib(t,e.js_libs[t]);delete e.js_libs}if(e.css_libs){for(t in e.css_libs)e.css_libs.hasOwnProperty(t)&&$$.injectCSSLib(t,e.css_libs[t]);delete e.css_libs}e.html&&((s=document.createElement("div")).innerHTML=e.html,e.html=1<s.childNodes.length?s:s.firstChild),e.request={type:i,name:o,data:c},$$[l]=e,$$[l].close=function(){this.html&&this.html.remove(),this.script.remove(),delete $$[l]},e.js_code&&(n="$$."+l+".call=function(){"+e.js_code+"};$$."+l+".call();"),r&&(e.success=r,n+="$$."+l+".success();"),n&&($$[l].script=$$.injectJSLib("code",n))}t+=$$.urlEncodeData($),"post"==i?$$.requestPost(t,c,a,e):$$.requestGet(t,a,e)};
+
+!function(){var i=[];$$.onload=function(t){if("object"!=typeof i)return t();i.push(t)},window.addEventListener("load",function(){for(var t=i,n=i=0;n<t.length;n++)t[n]()});var e=[];$$.onDomReady=function(t){if("object"!=typeof e)return t();e.push(t)},window.addEventListener("DOMContentLoaded",function(){for(var t=e,n=e=0;n<t.length;n++)t[n]()});var o=[];$$.onScroll=function(t,n){if(void 0===n&&(n=10),0==o.length){function i(){var n=$$.ui.scrollY();$$.each(o,function(){var t=this.last-n;t<this.step&&t>-this.step||(this.last=n,this.f())})}window.addEventListener("scroll",i),setTimeout(function(){i()},25)}o.push({f:t,step:n,last:2*-n})};var c=[];$$.checkVisibility=function(t,n){n=n||0;var i=window.innerHeight||document.documentElement.clientHeight,e=t.getBoundingClientRect(),o=[-n,i+n];return e.top>=o[0]&&e.top<=o[1]||e.bottom>=o[0]&&e.bottom<=o[1]},$$.onVisible=function(t,n,i){if($$.checkVisibility(t,i))return n.call(t);if(0==c.length){$$.onScroll(function(){$$.each(c,function(){$$.checkVisibility(this.elm,this.scan_ahead)&&(c.slice(c.indexOf(this),1),this.f.call(this.elm))})},50)}c.push({elm:t,f:n,scan_ahead:i})}}();
+
+window.rumbleErrorHandler||function(){function d(r){var n=r.match(/http[s]?:\/\/[^\/]*rumble.com(\/.*)$/);return n?n[1]:r}var u=0;window.rumbleErrorHandler=function(r){var n,e,o,t,l=r.message,i=r.filename,c=r.lineno,a=r.colno,m=d(i);i==m||l.match(/^Script error\./)||3<++u||(e=document.location+"",n=[d(e),u,l,m,c,a],r.error&&r.error.stack&&n.push(r.error.stack.split("\n").slice(1,3).join("\n")),o="/l/jserr?err="+encodeURIComponent(JSON.stringify(n)),e==n[0]&&(o="https://rumble.com"+o),(t=document.createElement("img")).src=o,t.width=t.height=1,t.onload=t.onerror=function(){t.onload=null,t.onerror=null})},window.addEventListener("error",window.rumbleErrorHandler)}();
+
+!function(e,n,t,o,c,a){e.fbq||(o=e.fbq=function(){o.callMethod?o.callMethod.apply(o,arguments):o.queue.push(arguments)},e._fbq||(e._fbq=o),(o.push=o).loaded=!0,o.version="2.0",o.queue=[],(c=n.createElement(t)).async=!0,setTimeout(function(){c.src="//connect.facebook.net/en_US/fbevents.js",(a=n.getElementsByTagName(t)[0]).parentNode.insertBefore(c,a)},50))}(window,document,"script"),fbq("init","459313920860148"),fbq("trackSingle","459313920860148","PageView");
+
+!function(){function e(){1200<window.innerWidth&&"overlay"==s.mode?(s.is_expanded&&$$.togglePopShow(new MouseEvent("click",{view:window,bubbles:!0,cancelable:!0})),s.setModePermanent()):window.innerWidth<=1200&&"permanent"==s.mode&&s.setModeOverlay()}var i=[],t=document.documentElement,s={element:$$.query("#main-menu")[0],with_permanent_mode:document.documentElement.classList.contains("with-permanent-menu"),mode:"overlay",is_expanded:!1,setModeOverlay:function(){this.mode="overlay",this.element.classList.remove("main-menu-nav-collapsed"),this.element.style.removeProperty("display"),t.classList.remove("main-menu-mode-permanent")},setModePermanent:function(){this.mode="permanent",this.is_expanded||this.element.classList.add("main-menu-nav-collapsed"),this.element.style.display="block",t.classList.add("main-menu-mode-permanent")},toggleExpanded:function(e,n){this.is_expanded=!this.is_expanded,this.is_expanded?t.classList.add("main-menu-expanded"):t.classList.remove("main-menu-expanded"),"permanent"==this.mode?this.element.classList.toggle("main-menu-nav-collapsed"):$$.togglePopShow(e,[n,this.element])}};$$.togglePopShow=function(e,n){var t;if((n=n||[]).length){e.stopPropagation(),e.preventDefault();for(var s=n[0].classList.contains("pop-show"),o=n.length;o--;)t=n[o],s?t.classList.remove("pop-show"):(t.classList.add("pop-show"),i.indexOf(t)<0&&i.push(t))}else for(t=e.target;t instanceof HTMLElement;){if(t.classList.contains("pop-show"))return;t=t.parentNode}for(o=i.length;o--;)n.indexOf(t=i[o])<0&&t.classList.remove("pop-show")},$$.toggleMainMenu=function(e,n){s.toggleExpanded(e,n)},$$.addClick(window,function(e){$$.togglePopShow(e)});s.element&&s.with_permanent_mode&&(e(),setTimeout(function(){var e=$$.query("main")[0],e=(e&&(e.style.transition="margin-left 200ms"),$$.query(".homepage-featured")[0]);e&&(e.style.transition="left 200ms")}),window.addEventListener("resize",function(){e()})),$$.main_menu=s}();
+
+$$.addClick('.main-menu-toggle', function(e) {
+	$$.toggleMainMenu(e, this);
+})
+$$.addServiceClick('.header-upload', 'user.login', {next: "/upload.php"});
+$$.addClick('.header-search-submit',function(e){
+	var i=$$.getByClass('header-search-field'),
+		v=i.value.trim();
+
+	e.preventDefault();
+	if(!$$.isVisible(i)){
+		$$.togglePopShow(e, [i,$$.getByClass('header-search')]);
+		i.focus();
+	}else{
+		if ( v == "" ) {
+			i.focus();
+			return false;
+		}
+
+		var submit_button = e.target;
+
+		if(/^\/user\//g.test(location.pathname)){
+			submit_button.setAttribute("disabled", "");
+			location = location.pathname + "?q="+encodeURIComponent(v);
+			return false;
+		}
+
+		submit_button.setAttribute("disabled", "");
+		location = "/search/all?q="+encodeURIComponent(v);
+	}
+	return false;
+});
+$$.user={"username":false,"logged_in":false};
+addThemeSwitcher( '.js-theme-option' , '.js-theme-option-group' );
+$$.addServiceClick('.header-user','user.login');
+window.google_analytics_uacct='UA-44331619-1';
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+
+gtag("js", new Date());
+gtag("config","UA-44331619-1",{custom_map:{dimension1:"server",dimension2:"user",metric1:"prebid",metric2:"loadtime"},"server":"web2","user":"Guest",'transport_type':'beacon'});
+gtag("event","web2",{"event_category":"ws","event_label":"US"});
+
+$$.include('//www.googletagmanager.com/gtag/js?id=UA-44331619-1&ext=.js');
+$$.includedJSLibs={"main":1,"web_services":1,"events":1,"error":1,"facebook_events":1,"darkmode":1,"ui_header":1};$$.includedCSSLibs=[]</script>		
+		</body></html>

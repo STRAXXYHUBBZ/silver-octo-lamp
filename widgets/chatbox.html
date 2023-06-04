@@ -125,16 +125,15 @@ socket.onmessage = function (message) {
     // let defaultHTML = "<span style='color: #" + randomColor + ";'>" + sender + "</span>: " + contents + "</div> ";
 
 
-
-
+      let count = 0;
       if(isBroadcaster){
-        defaultHTML = "<div data-aos='fade-right'><img src='https://moonbot.lol/widgets/chatAssets/broadcaster.png' class='badges'>" + defaultHTML;
+        defaultHTML = "<div data-aos='fade-right' data-aos-duration='1500'><img src='https://moonbot.lol/widgets/chatAssets/broadcaster.png' class='badges'>" + defaultHTML;
       }
       if(isVerified){
-        defaultHTML = "<div data-aos='fade-right'><img src='https://moonbot.lol/widgets/chatAssets/verified.png' class='badges'>" + defaultHTML;
+        defaultHTML = "<div data-aos='fade-right' data-aos-duration='1500'><img src='https://moonbot.lol/widgets/chatAssets/verified.png' class='badges'>" + defaultHTML;
       }
       if(isOG){
-        defaultHTML = "<div data-aos='fade-right'><img src='https://moonbot.lol/widgets/chatAssets/OG.png' class='badges'>" + defaultHTML;
+        defaultHTML = "<div data-aos='fade-right' data-aos-duration='1500'><img src='https://moonbot.lol/widgets/chatAssets/OG.png' class='badges'>" + defaultHTML;
       }
       if(isVIP){
         defaultHTML = "<div data-aos='fade-right' data-aos-duration='1500'><img src='https://moonbot.lol/widgets/chatAssets/VIP.png' class='badges'" + defaultHTML;
@@ -144,14 +143,12 @@ socket.onmessage = function (message) {
         defaultHTML = "<div data-aos='fade-right' data-aos-duration='1500'><img src='https://moonbot.lol/widgets/chatAssets/gifter.png' class='badges'>" + defaultHTML;
       }
       if(isBroadcaster){
-        defaultHTML = "<div data-aos='fade-right'><img src='https://moonbot.lol/widgets/chatAssets/broadcaster.png' class='badges'>" + defaultHTML;
+        defaultHTML = "<div data-aos='fade-right' data-aos-duration='1500'><img src='https://moonbot.lol/widgets/chatAssets/broadcaster.png' class='badges'>" + defaultHTML;
       }
       if(isModerator){
-        defaultHTML = "<div data-aos='fade-right'><img src='https://moonbot.lol/widgets/chatAssets/moderator.png' class='badges'>" + defaultHTML;
+        defaultHTML = "<div data-aos='fade-right' data-aos-duration='1500'><img src='https://moonbot.lol/moderator.png' class='badges'>" + defaultHTML;
       }
-      if(isSUB){
-        defaultHTML = "<div data-aos='fade-right'><img src='https://moonbot.lol/widgets/chatAssets/moderator.png' class='badges'>" + defaultHTML;
-      }
+
       box.innerHTML = defaultHTML;
   }
 }
@@ -174,3 +171,7 @@ socket.onmessage = function (message) {
 </div>
 
   
+<script>
+    var element = document.getElementById("container");
+      element.scrollTop = element.scrollHeight;
+</script>
