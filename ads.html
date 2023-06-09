@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ad Example</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+        
+        .ad-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .ad-text {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+        
+        .next-arrow {
+            display: block;
+            font-size: 36px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="ad-container">
+        <ins class="adsbygoogle"
+            style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-8711195335166058"
+             data-ad-slot="9557616507"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        
+        <div class="ad-text">Price: $0.05</div>
+        <div class="next-arrow">&#10140;</div>
+    </div>
+    
+    <script>
+        const nextArrow = document.querySelector('.next-arrow');
+        nextArrow.addEventListener('click', loadNewAd);
+        
+        function loadNewAd() {
+            // Replace YOUR_AD_CODE and AD_SLOT_ID with your own Google AdSense code and ad slot ID
+            const adContainer = document.querySelector('.ad-container');
+            adContainer.innerHTML = `
+                <ins class="adsbygoogle"
+                    style="display:inline-block;width:300px;height:250px"
+                    data-ad-client="YOUR_AD_CODE"
+                    data-ad-slot="AD_SLOT_ID"></ins>
+                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+                
+                <div class="ad-text">Price: $0.05</div>
+                <div class="next-arrow">&#10140;</div>
+            `;
+        }
+    </script>
+    
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</body>
+</html>
