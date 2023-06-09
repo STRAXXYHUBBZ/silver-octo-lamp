@@ -1,56 +1,339 @@
-<!DOCTYPE html>
-<html>
+<style>
+
+#particles-js {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  z-index: -1;
+}
+		.checkbox {
+			display: inline-block;
+			position: relative;
+			cursor: pointer;
+			user-select: none;
+		}
+
+		.checkbox input {
+			position: absolute;
+			opacity: 0;
+			cursor: pointer;
+			height: 0;
+			width: 0;
+		}
+
+		.checkbox .checkmark {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 1rem;
+			width: 1rem;
+			border: 2px solid #c431bc;
+			border-radius: 3px;
+			transition: background-color 0.2s ease-out, border-color 0.2s ease-out;
+		}
+
+		.checkbox input:checked + .checkmark {
+			background-color: #6d2d5f;
+			border-color: #83285d;
+		}
+
+		.checkbox .checkmark:after {
+			content: "";
+			position: absolute;
+			display: none;
+		}
+
+		.checkbox input:checked + .checkmark:after {
+			display: block;
+		}
+
+		.checkbox .checkmark:after {
+			left: 5px;
+			top: 1px;
+			width: 4px;
+			height: 8px;
+			border: solid white;
+			border-width: 0 2px 2px 0;
+			transform: rotate(45deg);
+		}
+
+		.checkbox-label {
+			margin-left: 1rem;
+			font-size: 1rem;
+			line-height: 1rem;
+		}
+
+
+   
+
+  body{
+    overflow: hidden;
+    background: url("./widgets/img/hero-bg.png");
+    position: relative;
+  }
+  .container {
+    z-index: 2;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 95vh;
+  }
+  
+  select {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ab13c900;
+    color: #ffffff;
+    box-shadow: 0 3px 4px #ab13c900;
+    cursor: pointer;
+  }
+
+  h1{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-shadow: 1px 1px #aa13c9; color: white; text-align: center; font-weight: 400;font-size: 16px;
+
+  }
+
+
+  select option {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+    color: black;
+    border-radius: 5px;
+    background-color: #cc29ec80;
+    
+  }
+  select option:checked {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+  background-color: #991578d3;
+  color: white;
+}
+select option:hover {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+  background-color: rgb(70, 25, 67);
+  color: red;
+}
+
+optgroup {
+  background-color: #aa13c9;
+  
+}
+
+
+  
+  button {
+    box-shadow: 0 3px 4px #aa13c9;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+    background: #bf34db;
+    z-index: 2;
+    color:  #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  </style>
+
+<meta property="og:title" content="Moonbot">
+<meta property="og:description" content="MoonBot is a multi-purpose and versatile Kick bot that can help enhance your Kick stream experience. It offers a wide range of features such as stream management, widgets, fun commands, and more. With MoonBot, you can easily manage your stream by setting up welcome messages, role assignments, and much more. MoonBot also comes with a variety of fun commands such as memes, and games that can keep your stream members entertained. It is user-friendly, customizable, and easy to use, making it a great addition to any Kick stream.".>
+<meta property="og:image" content="https://cdn.discordapp.com/icons/1066898914290176073/186c10a880023c2656e5e1f0938e3dc8.webp">
+<meta property="og:color" content="#9f55ff">
+<meta name="theme-color" content="#9f55ff">
 <head>
-    <title>Ad Example</title>
-    <style>
-        body {
-            background-color: #000;
-            color: #fff;
-            text-align: center;
-            font-family: Arial, sans-serif;
-        }
-
-        .ad-container {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 80vh;
-        }
-
-        .ad-container > ins {
-            display: inline-block;
-            width: 300px;
-            height: 250px;
-        }
-
-        .ad-info {
-            margin-top: 20px;
-        }
-
-        .next-arrow {
-            margin-top: 20px;
-            cursor: pointer;
-        }
-    </style>
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
 </head>
-<body>
-    <div class="ad-container">
-        <ins class="adsbygoogle"
-             style="display:inline-block;width:300px;height:250px"
-             data-ad-client="ca-pub-8711195335166058"
-             data-ad-slot="9557616507"></ins>
-        <div class="ad-info">
-            <p>Price: 0.05</p>
-        </div>
-        <div class="next-arrow">
-            <img src="next_arrow.png" alt="Next Arrow">
-        </div>
-    </div>
 
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<body oncontextmenu="return false;">
+  <script>function _0x4214(_0xeb951,_0x59e916){var _0x1399cd=_0x1399();return _0x4214=function(_0x42148e,_0x45d962){_0x42148e=_0x42148e-0x1ea;var _0x9bc641=_0x1399cd[_0x42148e];return _0x9bc641;},_0x4214(_0xeb951,_0x59e916);}var _0xf9697f=_0x4214;function _0x1399(){var _0x76caa6=['key','1284426vmWyxQ','15LUUuTP','9002ULvttF','shiftKey','8670990wkFpZA','ctrlKey','23814TRrTOY','1705424vVgikK','1240238aizlZZ','491610DYiXqA','9TTwryj','onkeydown','2584ipDznu','preventDefault'];_0x1399=function(){return _0x76caa6;};return _0x1399();}(function(_0x532830,_0x425496){var _0x1828ce=_0x4214,_0x328cdf=_0x532830();while(!![]){try{var _0x547fac=-parseInt(_0x1828ce(0x1f4))/0x1+-parseInt(_0x1828ce(0x1f6))/0x2+-parseInt(_0x1828ce(0x1ee))/0x3+parseInt(_0x1828ce(0x1f5))/0x4+parseInt(_0x1828ce(0x1ef))/0x5*(-parseInt(_0x1828ce(0x1f7))/0x6)+parseInt(_0x1828ce(0x1f0))/0x7*(parseInt(_0x1828ce(0x1eb))/0x8)+parseInt(_0x1828ce(0x1f8))/0x9*(parseInt(_0x1828ce(0x1f2))/0xa);if(_0x547fac===_0x425496)break;else _0x328cdf['push'](_0x328cdf['shift']());}catch(_0x5b6709){_0x328cdf['push'](_0x328cdf['shift']());}}}(_0x1399,0x5f729),document[_0xf9697f(0x1ea)]=_0x4c8144=>{var _0x293eda=_0xf9697f;_0x4c8144[_0x293eda(0x1ed)]==0x7b&&_0x4c8144['preventDefault'](),_0x4c8144['ctrlKey']&&_0x4c8144[_0x293eda(0x1f1)]&&_0x4c8144[_0x293eda(0x1ed)]=='I'&&_0x4c8144[_0x293eda(0x1ec)](),_0x4c8144[_0x293eda(0x1f3)]&&_0x4c8144[_0x293eda(0x1f1)]&&_0x4c8144[_0x293eda(0x1ed)]=='C'&&_0x4c8144[_0x293eda(0x1ec)](),_0x4c8144[_0x293eda(0x1f3)]&&_0x4c8144[_0x293eda(0x1f1)]&&_0x4c8144[_0x293eda(0x1ed)]=='J'&&_0x4c8144['preventDefault'](),_0x4c8144[_0x293eda(0x1f3)]&&_0x4c8144['key']=='U'&&_0x4c8144[_0x293eda(0x1ec)]();});</script>
+
+
+<body>  
+  <div id="particles-js"></div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <div class="container">
+    <div id="errorEle" style=" display:none;position:absolute; top: 95px;background-color: red; border-radius: 15px; padding:10px; width: 150px;"><h1 style="color: white; font-size:12px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-align: center;">Error:<br>Invalid Channel</h1></div>
+    <div>
+    
+      <label class="checkbox">
+        <input type="checkbox" name="exampleCheckbox" id="exampleCheckbox">
+        <span class="checkmark"></span>
+        <span class="checkbox-label" style="        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-shadow: 1px 1px #aa13c9; padding-left: 9px; color: white;font-weight: 550; font-size: 17px;
+        ">Blacklist Links?</span>
+      </label>
+    </div><br>
+  
+    <div>
+    <h1>Kick Username</h1>
+
+    <input type="text" id="intpu" placeholder="KICK USERNAME" style="border-radius: 5px; border: 1px solid #aa13c9; box-shadow: 0 3px 4px #cc29ec80; padding: 10px; margin-bottom: 10px;">
+    
+    
+  </div>
+
+
+  <div>
+    <h1>Blacklisted Words</h1>
+    <input type="text" id="intpu2" placeholder="word1,word2,word3,word4" style="border-radius: 5px; border: 1px solid #aa13c9; box-shadow: 0 3px 4px #cc29ec80; padding: 10px; margin-bottom: 10px;">
+    
+  </div>
+
+
+
+
+  <div style="background-color: #b759ca98; padding: 5px 30px; border-radius: 15px;     box-shadow: 0 5px 6px #ab13c994;  ">
+    <label for="dropdown" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-shadow: 1px 1px #aa13c9; color: white;font-weight: 400;font-size: 16px;">Voice:</label>
+    <select id="dropdown" onchange="updateValue()">
+
+      <option hidden selected>--Choose A Voice--</option>
+
+      <optgroup label="Popular">
+      <option value="Brian">Brian</option>
+      <option value="Ivy">Ivy</option>
+      <option value="Joey">Joey</option>
+      <option value="Justin">Justin</option>
+    </optgroup>
+    <optgroup  label="others"><option value="Filiz">Filiz</option>
+      <option value="Astrid">Astrid</option>
+      <option value="Tatyana">Tatyana</option>
+      <option value="Maxim">Maxim</option>
+      <option value="Carmen">Carmen</option>
+      <option value="Ines">Ines</option>
+      <option value="Cristiano">Cristiano</option>
+      <option value="Vitoria">Vitoria</option>
+      <option value="Ricardo">Ricardo</option>
+      <option value="Maja">Maja</option>
+      <option value="Jan">Jan</option>
+      <option value="Jacek">Jacek</option>
+      <option value="Ewa">Ewa</option>
+      <option value="Ruben">Ruben</option>
+      <option value="Lotte">Lotte</option>
+      <option value="Liv">Liv</option>
+      <option value="Seoyeon">Seoyeon</option>
+      <option value="Takumi">Takumi</option>
+      <option value="Mizuki">Mizuki</option>
+      <option value="Giorgio">Giorgio</option>
+      <option value="Carla">Carla</option>
+      <option value="Bianca">Bianca</option>
+      <option value="Karl">Karl</option>
+      <option value="Dora">Dora</option>
+      <option value="Mathieu">Mathieu</option>
+      <option value="Celine">Celine</option>
+      <option value="Chantal">Chantal</option>
+      <option value="Penelope">Penelope</option>
+      <option value="Miguel">Miguel</option>
+      <option value="Mia">Mia</option>
+      <option value="Enrique">Enrique</option>
+      <option value="Conchita">Conchita</option>
+      <option value="Geraint">Geraint</option>
+      <option value="Salli">Salli</option>
+      <option value="Matthew">Matthew</option>
+      <option value="Kimberly">Kimberly</option>
+      <option value="Kendra">Kendra</option>
+      <option value="Joanna">Joanna</option>
+      <option value="Raveena">Raveena</option>
+      <option value="Aditi">Aditi</option>
+      <option value="Emma">Emma</option>
+      <option value="Amy">Amy</option>
+      <option value="Russell">Russell</option>
+      <option value="Nicole">Nicole</option>
+      <option value="Vicki">Vicki</option>
+      <option value="Marlene">Marlene</option>
+      <option value="Hans">Hans</option>
+      <option value="Naja">Naja</option>
+      <option value="Mads">Mads</option>
+      <option value="Gwyneth">Gwyneth</option>
+      <option value="Zhiyu">Zhiyu</option>
+      <option value="Tracy">Tracy</option>
+      <option value="Danny">Danny</option>
+      <option value="Huihui">Huihui</option>
+      <option value="Yaoyao">Yaoyao</option>
+      <option value="Kangkang">Kangkang</option>
+      <option value="HanHan">HanHan</option>
+      <option value="Zhiwei">Zhiwei</option>
+      <option value="Asaf">Asaf</option>
+      <option value="An">An</option>
+      <option value="Stefanos">Stefanos</option>
+      <option value="Filip">Filip</option>
+    </optgroup>
+    </select>
+  </div>
+  <br>
+  <br>
+  <button type="button" id="copy-button" onclick="getText()">Copy Link</button>
+
+</div></body>
+
+
+  
+
+<script>
+
+var _0x431a36=_0x2e00;(function(_0x126f26,_0x1f0d36){var _0x3ca01c=_0x2e00,_0x3ca7b0=_0x126f26();while(!![]){try{var _0xabf3a5=-parseInt(_0x3ca01c(0xac))/0x1+parseInt(_0x3ca01c(0xa0))/0x2*(-parseInt(_0x3ca01c(0x92))/0x3)+parseInt(_0x3ca01c(0x8f))/0x4+-parseInt(_0x3ca01c(0x9e))/0x5*(parseInt(_0x3ca01c(0xb6))/0x6)+parseInt(_0x3ca01c(0x9c))/0x7*(parseInt(_0x3ca01c(0xb5))/0x8)+-parseInt(_0x3ca01c(0xad))/0x9+parseInt(_0x3ca01c(0x9a))/0xa*(parseInt(_0x3ca01c(0xb2))/0xb);if(_0xabf3a5===_0x1f0d36)break;else _0x3ca7b0['push'](_0x3ca7b0['shift']());}catch(_0x41bfa0){_0x3ca7b0['push'](_0x3ca7b0['shift']());}}}(_0x5a9f,0xa87cc));var nolinksallowed=![];const checkbox=document[_0x431a36(0xa9)](_0x431a36(0xa3));function _0x5a9f(){var _0x49127c=['12381rJwZRY','checked','&nolinks=','block','then','Text\x20copied\x20to\x20clipboard','dropdown','parse','230DVZJEd','error','2589874YindLR','&blacklist=','263365ibgAis','hasOwnProperty','146PDvras','data-aos','change','exampleCheckbox','status','Error:\x20','click','opacity\x200.5s\x20ease-in-out,\x20transform\x201s\x20ease-in-out','writeText','getElementById','none','translate(100%,\x2050%)','1181538ogEchB','4294575ykTiUH','open','chatroom','toString','GET','992948UFPqbn','clipboard','style','8WXnxWC','30Sdgxjf','&voice=','display','log','https://kick.com/api/v1/channels/','addEventListener','init','value','1869308MmAmvn','Clipboard\x20API\x20not\x20supported','responseText'];_0x5a9f=function(){return _0x49127c;};return _0x5a9f();}checkbox[_0x431a36(0x8c)](_0x431a36(0xa2),()=>{var _0x2de8ae=_0x431a36;checkbox[_0x2de8ae(0x93)]?nolinksallowed=!![]:nolinksallowed=![];});function _0x2e00(_0x2220d6,_0xffb962){var _0x5a9fc2=_0x5a9f();return _0x2e00=function(_0x2e0063,_0x2b4e7d){_0x2e0063=_0x2e0063-0x89;var _0x4d0f45=_0x5a9fc2[_0x2e0063];return _0x4d0f45;},_0x2e00(_0x2220d6,_0xffb962);}function updateValue(){var _0xa69129=_0x431a36;value=document['getElementById'](_0xa69129(0x98))[_0xa69129(0x8e)];}function copyToClipboard(_0x45363c){var _0x209a3c=_0x431a36;navigator[_0x209a3c(0xb3)]?navigator[_0x209a3c(0xb3)][_0x209a3c(0xa8)](_0x45363c)[_0x209a3c(0x96)](function(){var _0x2e7e58=_0x209a3c;console[_0x2e7e58(0x8a)](_0x2e7e58(0x97));},function(){console['error']('Could\x20not\x20copy\x20text\x20to\x20clipboard');}):console[_0x209a3c(0x9b)](_0x209a3c(0x90));}function getText(){var _0x15931a=_0x431a36,_0x1e19bb=document[_0x15931a(0xa9)]('intpu'),_0x2a5629=_0x1e19bb[_0x15931a(0x8e)];const _0x57f2d3=new XMLHttpRequest(),_0x3fcb67=_0x15931a(0x8b)+_0x1e19bb[_0x15931a(0x8e)];_0x57f2d3[_0x15931a(0xae)](_0x15931a(0xb1),_0x3fcb67),_0x57f2d3['onload']=function(){var _0x3dbe73=_0x15931a;if(_0x57f2d3[_0x3dbe73(0xa4)]===0xc8){const _0xace84a=JSON[_0x3dbe73(0x99)](_0x57f2d3[_0x3dbe73(0x91)]);if(_0xace84a[_0x3dbe73(0x9f)](_0x3dbe73(0xaf))){console['log'](_0xace84a['chatroom']['id']);var _0x5bc9c6,_0x14b78e;_0x5bc9c6=document['getElementById'](_0x3dbe73(0x98))[_0x3dbe73(0x8e)],_0x14b78e=intpu2[_0x3dbe73(0x8e)];var _0x48dc99='https://moonbot.lol/widgets/tts?id='+_0xace84a[_0x3dbe73(0xaf)]['id']+_0x3dbe73(0xb7)+_0x5bc9c6+_0x3dbe73(0x9d)+_0x14b78e+_0x3dbe73(0x94)+nolinksallowed[_0x3dbe73(0xb0)]();window['open'](_0x48dc99,'_blank');var _0x24028a=document[_0x3dbe73(0xa9)]('copy-button');_0x24028a[_0x3dbe73(0x8c)](_0x3dbe73(0xa6),function(){copyToClipboard(_0x48dc99);});}}else{if(_0x57f2d3[_0x3dbe73(0xa4)]===0x194){var _0x29911a=document[_0x3dbe73(0xa9)]('errorEle');_0x29911a[_0x3dbe73(0xb4)]['display']=_0x3dbe73(0x95),_0x29911a['setAttribute'](_0x3dbe73(0xa1),'fade-right'),AOS[_0x3dbe73(0x8d)](),setTimeout(function(){var _0x348f9b=_0x3dbe73;_0x29911a['style']['opacity']='0',_0x29911a[_0x348f9b(0xb4)]['transform']=_0x348f9b(0xab),_0x29911a[_0x348f9b(0xb4)]['transition']=_0x348f9b(0xa7),setTimeout(function(){var _0x36f293=_0x348f9b;_0x29911a[_0x36f293(0xb4)][_0x36f293(0x89)]=_0x36f293(0xaa);},0x3e8);},0xbb8);}else console[_0x3dbe73(0x8a)](_0x3dbe73(0xa5)+_0x57f2d3[_0x3dbe73(0xa4)]);}},_0x57f2d3['send']();}
+</script>
     <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
+function _0x3565(_0x5eecf3,_0x52eab5){var _0x5538d7=_0x5538();return _0x3565=function(_0x3565b8,_0x9f2810){_0x3565b8=_0x3565b8-0x1de;var _0x11caa7=_0x5538d7[_0x3565b8];return _0x11caa7;},_0x3565(_0x5eecf3,_0x52eab5);}var _0x4a2d46=_0x3565;(function(_0x770253,_0x198439){var _0x3e9116=_0x3565,_0x5d4c9c=_0x770253();while(!![]){try{var _0x267a5d=parseInt(_0x3e9116(0x1e9))/0x1+-parseInt(_0x3e9116(0x1e2))/0x2*(parseInt(_0x3e9116(0x1de))/0x3)+parseInt(_0x3e9116(0x1e0))/0x4+-parseInt(_0x3e9116(0x1e1))/0x5*(-parseInt(_0x3e9116(0x1e6))/0x6)+-parseInt(_0x3e9116(0x1df))/0x7*(-parseInt(_0x3e9116(0x1e7))/0x8)+-parseInt(_0x3e9116(0x1e5))/0x9+-parseInt(_0x3e9116(0x1e3))/0xa;if(_0x267a5d===_0x198439)break;else _0x5d4c9c['push'](_0x5d4c9c['shift']());}catch(_0x22d2f2){_0x5d4c9c['push'](_0x5d4c9c['shift']());}}}(_0x5538,0xc079c));function _0x5538(){var _0x12fcee=['5951272PuweJZ','730jZPlyb','2myaWgi','9842210AnIQZX','location','13534272oGrejg','24978WTRCpP','68936eNuTCO','searchParams','1193263hlDLEq','580281YfIseT','147WRpqRz'];_0x5538=function(){return _0x12fcee;};return _0x5538();}var url=new URL(window[_0x4a2d46(0x1e4)]['href']),value=url[_0x4a2d46(0x1e8)]['get']('id');
+
+      // Display the value on the page
     </script>
-</body>
-</html>
+
+
+
+
+
+
+
+
+<script src="particles.js"></script>
+<script src="app.js"></script>
+
+
+
+<!-- <div id="particles-js"> </div> -->
+
+
+<script src="particles.js"></script>
+<script src="app.js"></script>
+<script src="custom.js  "></script>
+
+
